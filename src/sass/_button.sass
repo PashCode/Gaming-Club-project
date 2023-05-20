@@ -1,0 +1,67 @@
+.main-button
+    @include button-font
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1.8rem 3.5rem 1.5rem
+    background: $color-green-light
+    color: $color-gray-light
+    border: none
+    border-radius: .3rem
+    cursor: pointer
+    overflow: hidden
+    transition: .3s
+
+    &__text
+        transition: .2s ease-out
+        z-index: 1
+    &:hover &__text
+        transform: translateX(-2rem)
+
+    &__icon
+        position: absolute
+        transform: translateX(20rem)
+        transition: .3s
+        z-index: 1
+        &_joystick
+            width: 12%
+        &_command
+            width: 10%
+    &:hover &__icon
+        transform: translateX(9rem)
+        transition: .2s ease-out
+        z-index: 1
+
+    &::before // Strip above the button / Смужка над кнопкою
+        position: absolute
+        content: ""
+        width: 0
+        height: 5%
+        top: 0
+        right: 0
+        background: $color-gray-light
+        transition: all .2s ease-out
+        z-index: 1
+    &:hover::before
+        width: 100%
+        height: 5%
+        left: auto
+        background: $color-gray-light
+    &:active::before
+        background: $color-green-light
+        transition: none
+
+    &:after // Transition to darker color / Затемнення кольору
+        position: absolute
+        content: ""
+        width: 0%
+        height: 110%
+        right: 0
+        background: $color-green-dark
+        transition: all .2s ease-out
+    &:hover::after
+        width: 100%
+        left: auto
+        right: 0
+        box-shadow: 0 0 .4rem 0 $color-blue-dark inset
