@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Website title / Заголовок сайту -->
+    <!--Website title / Заголовок сайту-->
     <title>Gaming Club ™ | Київ</title>
 
-    <!-- Connecting fonts / Підключення шрифтів -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Connecting styles / Підключення стилів -->
+    <!--Connecting styles / Підключення стилів-->
     <link rel="stylesheet" href="css/style.min.css" />
 
-    <!-- Favicon / Фавікон -->
+    <!--Favicon / Фавікон-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
@@ -25,7 +19,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Website description / Опис сайту -->
+    <!--Website description / Опис сайту-->
     <meta
       name="description"
       content="Ігровий комп'ютерний клуб у Києві. Чудове місце для занурення у світ ігор і змагань. У нас ви знайдете сучасні комп'ютери, широкий вибір ігор і дружню атмосферу. Приєднуйтесь до нас і пориньте в захоплюючий ігровий досвід."
@@ -33,14 +27,125 @@
   </head>
   <body>
     <div class="container">
+      <!-- Sidebar / Сайдбар -->
       <aside class="sidebar">Sidebar</aside>
-      <header class="header"></header>
+
+      <!--Header / Хедер-->
+      <header class="header">
+        <!--Header LEFT SIDE / ЛІВА СТОРОНА хедера-->
+        <div class="header-left-side">
+          <!--Main logo / Основний логотип-->
+          <svg class="header-left-side__logo">
+            <use href="icons/all-sprites-icons.svg#icon-main-logo"></use>
+          </svg>
+
+          <!-- Wrap for title, subtitle, button / Обгортка для заголовка, підзаголовка, кнопки-->
+          <div class="header-left-side__content-wrap">
+            <!-- Title / Заголовок -->
+            <h2 class="header-left-side__subtitle title-size-h2">ТВОЯ ІГРОВА СТАНЦІЯ</h2>
+            <!-- Subtitle / Підзаголовок -->
+            <h1 class="header-left-side__title title-size-h1">Поринь у світ сучасних ігор</h1>
+            <!-- Button / Кнопка -->
+            <button class="main-button header-left-side__button">
+              <span class="main-button__text">ОБРАТИ ПРИСТАВКУ</span>
+              <svg class="main-button__icon main-button__icon_joystick">
+                <use href="icons/all-sprites-icons.svg#icon-joystick-button"></use>
+              </svg>
+            </button>
+          </div>
+
+          <!--Wrap lines and icons at the bottom / Обгортка ліній та іконок знизу-->
+          <div class="header-left-side__lines-and-icons-wrap">
+            <!--Wrap for lines and text / Обгортка для ліній та тексту-->
+            <div class="header-left-side__lines-wrap">
+              <div class="header-left-side__line-left"></div>
+              <p class="header-left-side__text">Про нас</p>
+              <div class="header-left-side__line-right"></div>
+            </div>
+
+            <!--Wrap for icons / Обгортка для іконок-->
+            <div class="header-left-side__icons-wrap">
+              <!--First icon / Перша іконка -->
+              <svg class="header-left-side__icon header-left-side__icon-1">
+                <use href="icons/all-sprites-icons.svg#icon-header-1"></use>
+              </svg>
+
+              <!--Second icon / Друга іконка-->
+              <svg class="header-left-side__icon header-left-side__icon-2">
+                <use href="icons/all-sprites-icons.svg#icon-header-2"></use>
+              </svg>
+
+              <!--Third icon / Третя іконка-->
+              <svg class="header-left-side__icon header-left-side__icon-3">
+                <use href="icons/all-sprites-icons.svg#icon-header-3"></use>
+              </svg>
+
+              <!--Fourth icon / Четверта іконка-->
+              <svg class="header-left-side__icon header-left-side__icon-4">
+                <use href="icons/all-sprites-icons.svg#icon-header-4"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!--Header RIGHT SIDE / ПРАВА СТОРОНА хедера-->
+        <div class="header-right-side">
+          <!--Title / Заголовок-->
+          <h2 class="header-right-side__title title-size-h2">TOP 3 PLAYERS</h2>
+
+          <!--Wrap for all players / Обгортка для всіх гравців-->
+          <div class="header-right-side-players-wrap">
+            <!--First player / Перший гравець-->
+            <div class="header-right-side-players-wrap__member">
+              <!--Photo / Фото-->
+              <img
+                class="header-right-side-players-wrap__img"
+                src="img/header-players-1.png"
+                alt="Кращий гравець клубу"
+              />
+              <!--Wrap for name and score / Обгортка для імені і балів-->
+              <div class="header-right-side-players-wrap__text">
+                <h2 class="header-right-side-players-wrap__title title-size-h2">Ліза Фролова</h2>
+                <p class="header-right-side-players-wrap__text-score">score 2953</p>
+              </div>
+            </div>
+
+            <!--Second player / Другий гравець-->
+            <div class="header-right-side-players-wrap__member">
+              <!--Photo / Фото-->
+              <img
+                class="header-right-side-players-wrap__img"
+                src="img/header-players-2.png"
+                alt="Кращий гравець клубу"
+              />
+              <!--Wrap for name and score / Обгортка для імені і балів-->
+              <div class="header-right-side-players-wrap__text">
+                <h2 class="header-right-side-players-wrap__title title-size-h2">Андрій Павлюк</h2>
+                <p class="header-right-side-players-wrap__text-score">score 2453</p>
+              </div>
+            </div>
+
+            <!--Third player / Третій гравець-->
+            <div class="header-right-side-players-wrap__member">
+              <!--Photo / Фото-->
+              <img
+                class="header-right-side-players-wrap__img"
+                src="img/header-players-3.png"
+                alt="Кращий гравець клубу"
+              />
+              <!--Wrap for name and score / Обгортка для імені і балів-->
+              <div class="header-right-side-players-wrap__text">
+                <h2 class="header-right-side-players-wrap__title title-size-h2">Іван Бойко</h2>
+                <p class="header-right-side-players-wrap__text-score">score 2253</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       <main class="main">
         <section class="section-community">Section-community</section>
-        <section class="section-tournament">
-          <div class="box-1">First</div>
-          <div class="box-2">Second</div>
-        </section>
+        <section class="section-tournament">Section-tournament</section>
         <section class="section-cards">Cards</section>
         <section class="section-gallery">Gallery</section>
       </main>

@@ -1,11 +1,47 @@
+// Connecting fonts / Підключення шрифтів
+@font-face
+    font-family: 'Montserrat-Light'
+    src: url('../fonts/Montserrat-Light.eot')
+    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/Montserrat-Light.woff') format('woff'),
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype')
+    font-weight: 300
+    color: ''
+
+@font-face
+    font-family: 'Montserrat-Regular'
+    src: url('../fonts/Montserrat-Regular.eot')
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/Montserrat-Regular.woff') format('woff'),
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype')
+    font-weight: 400
+    color: ''
+
+@font-face
+    font-family: 'Montserrat-Semibold'
+    src: url('../fonts/Montserrat-SemiBold.eot')
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype')
+    font-weight: 600
+
+@font-face
+    font-family: 'Montserrat-Bold'
+    src: url('../fonts/Montserrat-Bold.eot')
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/Montserrat-Bold.woff') format('woff'),
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype')
+    font-weight: 700
+    color: ''
+
 // Utilities for titles / Утіліти для заголовків
 .title-size-h1
     font-size: 4.5rem
-    font-weight: 700
+    font-family: 'Montserrat-Bold'
 .title-size-h2
     font-size: 1.9rem
     font-weight: 300
-    letter-spacing: 13%
+    letter-spacing: .2rem
 .title-size-h3
     font-size: 1.6rem
     font-weight: 300
@@ -13,4 +49,5 @@
 
 // Font for buttons / Шрифт для кнопок
 @mixin button-font
-    font: 700 1.6rem uppercase 'Montserrat', sans-serif
+    font: 1.6rem 'Montserrat-Semibold', sans-serif
+    text-transform: uppercase
