@@ -25,6 +25,7 @@
         font-family: 'Montserrat-Light'
         color: $color-green-light
         line-height: 2rem
+        letter-spacing: .2rem
     &__title
         letter-spacing: .2rem
         margin-bottom: 5rem
@@ -38,17 +39,18 @@
         align-items: center
         margin-bottom: 2.5rem
         gap: 2rem
+    &__text
+        color: $color-gray-dark
+        font-weight: 600
     &__line-left, &__line-right
-        border-top: 1px solid $color-gray-light
+        border-top: 1px solid $color-gray-dark
         width: 40%
     &__icons-wrap
         display: flex
         justify-content: center
         align-items: center
-        gap: 11rem
         padding: 0 5rem
     &__icon
-        width: 12rem
         height: 3rem
 
 // Header RIGHT SIDE / ПРАВА СТОРОНА хедера
@@ -58,7 +60,7 @@
     background: $color-blue-dark
     &__title
         text-transform: uppercase
-        font-weight: 700
+        font-family: 'Montserrat-Bold'
         color: $color-green-light
         justify-self: center
         align-self: end
@@ -79,7 +81,7 @@
         border-radius: 50%
         width: 7rem
     &__title
-        font-weight: 700
+        font-family: 'Montserrat-Bold'
     &__text-score
         font-family: 'Montserrat-Light'
         color: $color-gray-dark
