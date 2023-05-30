@@ -13,7 +13,6 @@
     border-radius: .2rem
     cursor: pointer
     overflow: hidden
-
     &__text
         transition: all .2s ease-out
         z-index: 1
@@ -34,7 +33,7 @@
         transition: all .2s ease-out
         z-index: 1
 
-    &::before // Strip above the button / Смужка над кнопкою
+    &::before // Line over the button / Смужка над кнопкою
         position: absolute
         content: ""
         width: 0
@@ -65,3 +64,41 @@
         width: 100%
         left: auto
         right: 0
+
+.cards-button
+    width: 100%
+    @extend .main-button
+    &:hover &__text
+        transform: translateX(0rem)
+        z-index: 1
+    &::before // Line over the button / Смужка над кнопкою
+        position: absolute
+        content: ""
+        width: 100%
+        height: 5%
+        top: 100%
+        background: $color-gray-light
+        transition: all .2s ease-out
+        z-index: 1
+    &:hover::before
+        width: 100%
+        height: 5%
+        top: 0
+        background: $color-gray-light
+    &:active::before
+        background: $color-green-light
+        transition: none
+
+    &:after // Transition to darker color / Затемнення кольору
+        position: absolute
+        content: ""
+        width: 100%
+        height: 0%
+        bottom: 0
+        background: $color-green-dark
+        transition: all .2s ease-out
+    &:hover::after
+        width: 100%
+        height: 100%
+        top: auto
+        bottom: 0

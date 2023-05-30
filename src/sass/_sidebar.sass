@@ -1,4 +1,83 @@
 .sidebar
+    display: grid
+    width: 7.5rem
     background: $color-green-dark
     grid-row: 1 / -1
     grid-column: 1 / 2
+    z-index: 3
+    padding: 2.5rem 1rem
+
+    &__label-check
+        display: none
+    &__hamburger-label
+        display: block
+        position: fixed
+        width: 5.5rem
+        height: 4rem
+        cursor: pointer
+        z-index: 2
+    &__hamburger-label div
+        width: 5.5rem
+        height: .35rem
+        background-color: #fff
+        position: fixed
+        transition: all .2s
+    &__line2
+        margin-top: 1.5rem
+    &__line3
+        margin-top: 3rem
+
+    &__nav-menu
+        opacity: 0
+    &__item-wrap
+        position: absolute
+        display: grid
+        grid-template-columns: max-content
+        gap: 2rem
+    &__link
+        text-decoration: none
+        color: $color-gray-light
+    &__item
+        list-style-type: none
+        font-size: 3rem
+        &:hover
+            color: $color-blue-dark
+            font-family: 'Montserrat-Bold'
+
+#label-check:checked + .sidebar__hamburger-label .sidebar__line1
+    transform: rotate(36.5deg) scaleX(.49) translate(3.9rem, -.45rem)
+    border-radius: 0 5rem 5rem 0
+    background: $color-blue-dark
+
+#label-check:checked + .sidebar__hamburger-label .sidebar__line3
+    transform: rotate(-36.5deg) scaleX(.49) translate(3.9rem, .45rem)
+    border-radius: 0 5rem 5rem 0
+    background: $color-blue-dark
+
+#label-check:checked + .sidebar__hamburger-label .sidebar__line2
+    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
+    width: 45px
+    background: $color-blue-dark
+
+.sidebar__label-check:checked ~ .sidebar__nav-menu
+    opacity: 1
+    position: fixed
+    top: 40%
+    z-index: 1
+    transition: opacity .5s ease-in
+
+.sidebar__fill
+    position: fixed
+    background: $color-green-dark
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 0
+    z-index: 1
+    transition: all .2s ease-out
+
+.sidebar__label-check:checked ~ .sidebar__fill
+    width: 30%
+    transition: all .2s ease-out
