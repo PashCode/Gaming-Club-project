@@ -1,83 +1,113 @@
 .sidebar
-    display: grid
-    width: 7.5rem
+    position: fixed
+    width: 7rem
+    height: 100vh
     background: $color-green-dark
-    grid-row: 1 / -1
-    grid-column: 1 / 2
-    z-index: 3
-    padding: 2.5rem 1rem
+    z-index: 4
+    @include respond(big-tablet)
+        width: 100%
+        height: 7rem
 
-    &__label-check
+    &__toggle
         display: none
-    &__hamburger-label
-        display: block
+    &__button
         position: fixed
-        width: 5.5rem
-        height: 4rem
+        width: 10rem
+        height: 7rem
+        z-index: 3
+        left: 0
         cursor: pointer
-        z-index: 2
-    &__hamburger-label div
-        width: 5.5rem
-        height: .35rem
-        background-color: #fff
-        position: fixed
-        transition: all .2s
-    &__line2
-        margin-top: 1.5rem
-    &__line3
-        margin-top: 3rem
+        @include respond(big-tablet)
+            left: auto
+            right: 0
 
+    &__line
+        position: fixed
+        width: 5rem
+        height: .3rem
+        background: $color-gray-light
+        transform: translateX(1rem) translateY(2rem)
+        transition: .4s
+        @include respond(big-tablet)
+            transform: translateX(3rem) translateY(2rem)
+
+    &__line-2
+        margin-top: 1.5rem
+    &__line-3
+        margin-top: 3rem
+    &__toggle:checked + &__button &__line
+        background: $color-blue-dark
+    &__toggle:checked + &__button &__line-1
+        margin-left: 1rem
+        @include respond(big-tablet)
+            margin-left: 0rem
+    &__toggle:checked + &__button &__line-2
+        margin-left: 2rem
+        @include respond(big-tablet)
+            margin-top: 2rem
+            margin-left: 0rem
+    &__toggle:checked + &__button &__line-3
+        margin-left: 3rem
+        @include respond(big-tablet)
+            margin-top: 4rem
+            margin-left: 0rem
+
+    &__background
+        position: fixed
+        width: 0
+        height: 100vh
+        top: 0
+        left: 0
+        background: $color-green-dark
+        transition: .4s
+        @include respond(big-tablet)
+            width: 100%
+            height: 0
+    &__toggle:checked ~ &__background
+        width: 40%
+        height: 100vh
+        @include respond(big-tablet)
+            width: 100%
+            height: 50vh
     &__nav-menu
-        opacity: 0
+        position: fixed
+        height: 100vh
+        width: 100%
+        transform: translateX(-200rem)
+        transition: .4s
+        z-index: 2
+        @include respond(big-tablet)
+            height: 50vh
+            transform: translateY(-200rem)
+    &__toggle:checked ~ &__nav-menu
+        transform: translateX(0rem)
+        @include respond(big-tablet)
+            transform: translateY(0rem)
     &__item-wrap
+        width: 100%
         position: absolute
-        display: grid
-        grid-template-columns: max-content
-        gap: 2rem
-    &__link
-        text-decoration: none
-        color: $color-gray-light
+        top: 50%
+        left: 1%
+        transform: translateY(-50%)
+        @include respond(big-tablet)
+            left: 50%
+            transform: translate(-50%, -50%)
     &__item
-        list-style-type: none
-        font-size: 3rem
+        list-style: none
+        text-align: left
+        &:not(:last-child)
+            margin-bottom: 1.5rem
+        @include respond(big-tablet)
+            text-align: center
+
+    &__link
+        &:link, &:visited
+            font-size: 3.5rem
+            text-transform: uppercase
+            text-decoration: none
+            color: $color-gray-light
+            transition: .2s
+            @include respond(big-phone)
+                font-size: 2.5rem
         &:hover
             color: $color-blue-dark
-            font-family: 'Montserrat-Bold'
-
-#label-check:checked + .sidebar__hamburger-label .sidebar__line1
-    transform: rotate(36.5deg) scaleX(.49) translate(3.9rem, -.45rem)
-    border-radius: 0 5rem 5rem 0
-    background: $color-blue-dark
-
-#label-check:checked + .sidebar__hamburger-label .sidebar__line3
-    transform: rotate(-36.5deg) scaleX(.49) translate(3.9rem, .45rem)
-    border-radius: 0 5rem 5rem 0
-    background: $color-blue-dark
-
-#label-check:checked + .sidebar__hamburger-label .sidebar__line2
-    border-top-right-radius: 50px
-    border-bottom-right-radius: 50px
-    width: 45px
-    background: $color-blue-dark
-
-.sidebar__label-check:checked ~ .sidebar__nav-menu
-    opacity: 1
-    position: fixed
-    top: 40%
-    z-index: 1
-    transition: opacity .5s ease-in
-
-.sidebar__fill
-    position: fixed
-    background: $color-green-dark
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    width: 0
-    z-index: 1
-    transition: all .2s ease-out
-
-.sidebar__label-check:checked ~ .sidebar__fill
-    width: 30%
-    transition: all .2s ease-out

@@ -1,14 +1,21 @@
 .section-cards
-    grid-row: 3 / 4
     grid-column: 2 / 10
-    padding: 15rem 7rem
+    padding: 7rem 4rem
+    @include respond(big-phone)
+        padding: 7rem 1rem
     &__items-wrap
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr))
         gap: 3rem 5rem
+        @include respond(tablet)
+            grid-template-columns: repeat(auto-fit, minmax(35.5rem, 1fr))
+            gap: 2rem 3rem
+        @include respond(small-tablet)
+            grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr))
+
     &__item
-        display: grid
-        grid-template-columns: 100%
+        // display: grid
+        // grid-template-columns: 100%
         justify-content: center
         background: $color-blue-dark
         border-radius: .3rem

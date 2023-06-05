@@ -26,646 +26,647 @@
     />
   </head>
   <body>
-    <div class="container">
-      <!-- Sidebar / Сайдбар -->
-      <aside class="sidebar">
-        <input class="sidebar__label-check" id="label-check" type="checkbox" />
-        <label for="label-check" class="sidebar__hamburger-label">
-          <div class="sidebar__line1"></div>
-          <div class="sidebar__line2"></div>
-          <div class="sidebar__line3"></div>
-        </label>
-        <div class="sidebar__fill"></div>
-        <nav class="sidebar__nav-menu">
-          <ul class="sidebar__item-wrap">
-            <a class="sidebar__link" href="#section-cards-anchor">
-              <li class="sidebar__item">ОРЕНДА КОНСОЛЕЙ</li>
-            </a>
-            <a class="sidebar__link" href="#section-tournament-anchor"
-              ><li class="sidebar__item">КОМАНДНІ ЗМАГАННЯ</li></a
-            >
-            <a class="sidebar__link" href="#section-cards-anchor">
-              <li class="sidebar__item">ОРЕНДА СЕРВЕРА</li></a
-            >
-            <a class="sidebar__link" href="#section-community-anchor"
-              ><li class="sidebar__item">СПІЛЬНОТА</li></a
-            >
-            <a class="sidebar__link" href="#section-gallery-anchor"
-              ><li class="sidebar__item">ПРАЦЮЙ ТА ГРАЙ</li></a
-            >
-          </ul>
-        </nav>
-      </aside>
+    <!-- Sidebar / Сайдбар -->
+    <aside class="sidebar">
+      <input type="checkbox" class="sidebar__toggle" id="nav-toggle" />
+      <label for="nav-toggle" class="sidebar__button">
+        <span class="sidebar__line sidebar__line-1"></span>
+        <span class="sidebar__line sidebar__line-2"></span>
+        <span class="sidebar__line sidebar__line-3"></span>
+      </label>
+      <div class="sidebar__background"></div>
+      <nav class="sidebar__nav-menu">
+        <ul class="sidebar__item-wrap">
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link"> КОМАНДНІ ЗМАГАННЯ </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link">ОРЕНДА КОНСОЛЕЙ</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link"> ОРЕНДА СЕРВЕРА</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link"> ПРАЦЮЙ ТА ГРАЙ</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link"> СПІЛЬНОТА</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
-      <!--Header / Хедер-->
-      <header class="header">
-        <!--Header LEFT SIDE / ЛІВА СТОРОНА хедера-->
-        <div class="header-left-side">
-          <!--Main logo / Основний логотип-->
-          <a href="#" class="header-left-side__logo">
-            <svg class="header-left-side__svg">
-              <use href="icons/all-sprites-icons.svg#icon-main-logo"></use>
-            </svg>
-          </a>
-
-          <!-- Wrap for title, subtitle, button / Обгортка для заголовка, підзаголовка, кнопки-->
-          <div class="header-left-side__content-wrap">
-            <!-- Subtitle / Підзаголовок -->
-            <h2 class="header-left-side__subtitle title-size-h2">ТВОЯ ІГРОВА СТАНЦІЯ</h2>
-            <!-- Title / Заголовок -->
-            <h1 class="header-left-side__title title-size-h1">Поринь у світ сучасних ігор</h1>
-            <!-- Button / Кнопка -->
-            <button class="main-button header-left-side__button">
-              <span class="main-button__text header-left-side__text-btn">ОБРАТИ ПРИСТАВКУ</span>
-              <svg class="main-button__icon main-button__icon_joystick">
-                <use href="icons/all-sprites-icons.svg#icon-joystick-button"></use>
-              </svg>
-            </button>
-          </div>
-
-          <!--Wrap lines and icons at the bottom / Обгортка ліній та іконок знизу-->
-          <div class="header-left-side__lines-and-icons-wrap">
-            <!--Wrap for lines and text / Обгортка для ліній та тексту-->
-            <div class="header-left-side__lines-wrap">
-              <div class="header-left-side__line-left"></div>
-              <p class="header-left-side__text">Про нас</p>
-              <div class="header-left-side__line-right"></div>
-            </div>
-
-            <!--Wrap for icons / Обгортка для іконок-->
-            <div class="header-left-side__icons-wrap">
-              <!--First icon / Перша іконка -->
-              <svg class="header-left-side__icon header-left-side__icon-1">
-                <use href="icons/all-sprites-icons.svg#icon-header-1"></use>
-              </svg>
-
-              <!--Second icon / Друга іконка-->
-              <svg class="header-left-side__icon header-left-side__icon-2">
-                <use href="icons/all-sprites-icons.svg#icon-header-2"></use>
-              </svg>
-
-              <!--Third icon / Третя іконка-->
-              <svg class="header-left-side__icon header-left-side__icon-3">
-                <use href="icons/all-sprites-icons.svg#icon-header-3"></use>
-              </svg>
-
-              <!--Fourth icon / Четверта іконка-->
-              <svg class="header-left-side__icon header-left-side__icon-4">
-                <use href="icons/all-sprites-icons.svg#icon-header-4"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!--Header RIGHT SIDE / ПРАВА СТОРОНА хедера-->
-        <div class="header-right-side">
-          <!--Title / Заголовок-->
-          <h2 class="header-right-side__title title-size-h2">TOP 3 PLAYERS</h2>
-
-          <!--Wrap for all players / Обгортка для всіх гравців-->
-          <div class="header-right-side-players-wrap">
-            <!--First player / Перший гравець-->
-            <div class="header-right-side-players-wrap__member">
-              <!--Photo / Фото-->
-              <img
-                class="header-right-side-players-wrap__img"
-                src="img/header-players-1.png"
-                alt="Кращий гравець клубу"
-              />
-
-              <!--Wrap for name and score / Обгортка для імені і балів-->
-              <div class="header-right-side-players-wrap__text">
-                <h2 class="header-right-side-players-wrap__title title-size-h2">Ліза Фролова</h2>
-                <p class="header-right-side-players-wrap__text-score">score 2953</p>
-              </div>
-            </div>
-
-            <!--Second player / Другий гравець-->
-            <div class="header-right-side-players-wrap__member">
-              <!--Photo / Фото-->
-              <img
-                class="header-right-side-players-wrap__img"
-                src="img/header-players-2.png"
-                alt="Кращий гравець клубу"
-              />
-
-              <!--Wrap for name and score / Обгортка для імені і балів-->
-              <div class="header-right-side-players-wrap__text">
-                <h2 class="header-right-side-players-wrap__title title-size-h2">Андрій Павлюк</h2>
-                <p class="header-right-side-players-wrap__text-score">score 2453</p>
-              </div>
-            </div>
-
-            <!--Third player / Третій гравець-->
-            <div class="header-right-side-players-wrap__member">
-              <!--Photo / Фото-->
-              <img
-                class="header-right-side-players-wrap__img"
-                src="img/header-players-3.png"
-                alt="Кращий гравець клубу"
-              />
-
-              <!--Wrap for name and score / Обгортка для імені і балів-->
-              <div class="header-right-side-players-wrap__text">
-                <h2 class="header-right-side-players-wrap__title title-size-h2">Іван Бойко</h2>
-                <p class="header-right-side-players-wrap__text-score">score 2253</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!--Main site content / Основний контенту сайту-->
-      <main class="main">
-        <!--Section community / Секція спільноти-->
-        <section id="section-community-anchor" class="section-community">
-          <!--Wrap for section elements / Обгортка для елементів секції -->
-          <div class="section-community__content-wrap">
-            <!--First section element / Перший елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-steam"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Найкраща ігрова платформа</h2>
-                <p class="section-community__description">
-                  Пориньте в унікальний світ ігор з нашою неперевершеною ігровою платформою, що
-                  пропонує неймовірні можливості та захопливі пригоди.
-                </p>
-              </div>
-            </div>
-
-            <!--Second section element / Другий елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-cup"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Щотижневі турніри</h2>
-                <p class="section-community__description">
-                  Станьте частиною нашої активної ігрової сцени та беріть участь у захопливих
-                  щотижневих турнірах. Відкрийте свої навички і змагайтеся з кращими гравцями.
-                </p>
-              </div>
-            </div>
-
-            <!--Third section element / Третій елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-headphones"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Онлайн спілкування</h2>
-                <p class="section-community__description">
-                  Спілкуйтеся з гравцями з усього світу, діліться досвідом, обговорюйте стратегії та
-                  знаходьте нових друзів у нашому онлайн-середовищі.
-                </p>
-              </div>
-            </div>
-
-            <!--Fourth section element / Четвертий елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-earth"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Спільнота в усьому світі</h2>
-                <p class="section-community__description">
-                  Приєднуйтесь до нашої глобальної спільноти гравців, де кордони не існують. Тут ви
-                  знайдете людей різних культур, мов та інтересів, об'єднаних любов'ю до ігор.
-                </p>
-              </div>
-            </div>
-
-            <!--Fifth section element / П'ятий елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-chat"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Онлайн чат із підтримкою</h2>
-                <p class="section-community__description">
-                  Отримуйте надійну та оперативну підтримку в нашому зручному онлайн чаті. Наша
-                  команда експертів завжди готова допомогти вам вирішити будь-які питання.
-                </p>
-              </div>
-            </div>
-
-            <!--Sixth section element / Шостий елемент секції-->
-            <div class="section-community__item">
-              <!--Icon / Іконка-->
-              <svg class="section-community__icon">
-                <use href="icons/all-sprites-icons.svg#icon-section-community-backet"></use>
-              </svg>
-              <!--Wrap for text / Обгортка для тексту-->
-              <div class="section-community__text-wrap">
-                <h2 class="section-community__title title-size-h2">Зручна система оплати</h2>
-                <p class="section-community__description">
-                  Насолоджуйтеся простотою і зручністю нашої системи оплати, що дозволяє вам легко і
-                  безпечно купувати ігри, додатковий контент та інші товари.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--Section tournament / Секція змагань-->
-        <section id="section-tournament-anchor" class="section-tournament">
-          <!--lEFT SIDE section / ЛІВА СТОРОНА секції-->
-          <div class="section-tournament__left-side">
-            <img
-              class="section-tournament__img section-tournament__img-1"
-              src="img/section-tournament-1.png"
-              alt=""
-            />
-            <img
-              class="section-tournament__img section-tournament__img-2"
-              src="img/section-tournament-2.png"
-              alt=""
-            />
-          </div>
-
-          <!--RIGHT SIDE section / ПРАВА СТОРОНА секції-->
-          <div class="section-tournament__right-side">
-            <!--Wrap for content / Обгортка для контенту-->
-            <div class="section-tournament__content-wrap">
-              <h2 class="section-tournament__subtitle title-size-h2">ВЕДИ КОМАНДУ ДО ПЕРЕМОГИ</h2>
-              <h1 class="section-tournament__title">
-                Найкраще місце для <br />
-                онлайн змагань
-              </h1>
-              <p class="section-tournament__description">
-                Відчуйте справжню пристрасть до змагань на нашій платформі, де епічні битви та
-                незабутні досягнення чекають на вас. Створіть команду і приведіть її до грандіозних
-                перемог у захопливих онлайн змаганнях.
-              </p>
-              <!--Button / Кнопка-->
-              <button class="main-button">
-                <span class="main-button__text">СТВОРИТИ КОМАНДУ</span>
-                <svg class="main-button__icon main-button__icon_command">
-                  <use href="icons/all-sprites-icons.svg#icon-command-button"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- Cards -->
-        <section id="section-cards-anchor" class="section-cards">
-          <!-- Content-wrap -->
-          <div class="section-cards__items-wrap">
-            <!-- Каждая карточа -->
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-pc.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">PC</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">20+ гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 100грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">4к монітор</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-playstation.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">Play Station</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">7 гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 150грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Play Station 5</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-xbox.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">X-BOX</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">5 гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 150грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Xbox One X</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-nintendo.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">Nintendo</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">5 гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 70грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Nintendo Switch</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-steamdeck.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">Steam Deck</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">5 гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 70грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Steam Deck</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-
-            <div class="section-cards__item">
-              <!-- Фотка -->
-              <img class="section-cards__img" src="img/section-cards-mobile.png" alt="" />
-              <!-- Название девайса -->
-              <div class="section-cards__device-name">Mobile</div>
-              <!-- Обертка для текста и иконок -->
-              <div class="section-cards__texts-and-icons-wrap">
-                <!-- Обертка для каждой иконки с текстом -->
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Київ</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">50+ гравців</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">від 50грн.</p>
-                </div>
-
-                <div class="section-cards__item-wrap">
-                  <svg class="section-cards__icon">
-                    <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
-                  </svg>
-                  <p class="section-cards__icon-text">Samsung</p>
-                </div>
-              </div>
-              <!-- Кнопка -->
-              <button class="cards-button">
-                <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- Галерея -->
-        <section id="section-gallery-anchor" class="section-gallery">
-          <div class="section-gallery__item section-gallery__item-1">
-            <img class="section-gallery__img" src="img/section-gallery-1.png" alt="img-1" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-2">
-            <img class="section-gallery__img" src="img/section-gallery-2.png" alt="img-2" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-3">
-            <img class="section-gallery__img" src="img/section-gallery-3.png" alt="img-3" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-4">
-            <img class="section-gallery__img" src="img/section-gallery-4.png" alt="img-4" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-5">
-            <img class="section-gallery__img" src="img/section-gallery-5.png" alt="img-5" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-6">
-            <img class="section-gallery__img" src="img/section-gallery-6.png" alt="img-6" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-7">
-            <img class="section-gallery__img" src="img/section-gallery-7.png" alt="img-7" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-8">
-            <img class="section-gallery__img" src="img/section-gallery-8.png" alt="img-8" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-9">
-            <img class="section-gallery__img" src="img/section-gallery-9.png" alt="img-9" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-10">
-            <img class="section-gallery__img" src="img/section-gallery-10.png" alt="img-10" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-11">
-            <img class="section-gallery__img" src="img/section-gallery-11.png" alt="img-11" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-12">
-            <img class="section-gallery__img" src="img/section-gallery-12.png" alt="img-12" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-13">
-            <img class="section-gallery__img" src="img/section-gallery-13.png" alt="img-13" />
-          </div>
-
-          <div class="section-gallery__item section-gallery__item-14">
-            <img class="section-gallery__img" src="img/section-gallery-14.png" alt="img-14" />
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <!-- ЛЛого -->
-        <a href="#" class="footer__logo">
-          <svg>
+    <!--Header / Хедер-->
+    <header class="header">
+      <!--Header LEFT SIDE / ЛІВА СТОРОНА хедера-->
+      <div class="header-left-side">
+        <!--Main logo / Основний логотип-->
+        <a href="#" class="header-left-side__logo">
+          <svg class="header-left-side__svg">
             <use href="icons/all-sprites-icons.svg#icon-main-logo"></use>
           </svg>
         </a>
-        <!-- Меню -->
-        <nav class="footer__nav-menu">
-          <ul class="footer__item-wrap">
-            <a class="footer__link" href="#section-cards-anchor">
-              <li class="footer__item">ОРЕНДА КОНСОЛЕЙ</li>
-            </a>
-            <a class="footer__link" href="#section-tournament-anchor"
-              ><li class="footer__item">КОМАНДНІ ЗМАГАННЯ</li></a
+
+        <!-- Wrap for title, subtitle, button / Обгортка для заголовка, підзаголовка, кнопки-->
+        <div class="header-left-side__content-wrap">
+          <!-- Subtitle / Підзаголовок -->
+          <h2 class="header-left-side__subtitle title-size-h2">ТВОЯ ІГРОВА СТАНЦІЯ</h2>
+          <!-- Title / Заголовок -->
+          <h1 class="header-left-side__title title-size-h1">Поринь у світ сучасних ігор</h1>
+          <!-- Button / Кнопка -->
+          <button class="main-button header-left-side__button">
+            <span class="main-button__text header-left-side__text-btn">ОБРАТИ ПРИСТАВКУ</span>
+            <svg
+              class="main-button__icon main-button__icon_joystick header-left-side__icon_joystick"
             >
-            <a class="footer__link" href="#section-cards-anchor">
-              <li class="footer__item">ОРЕНДА СЕРВЕРА</li></a
-            >
-            <a class="footer__link" href="#section-community-anchor"
-              ><li class="footer__item">СПІЛЬНОТА</li></a
-            >
-            <a class="footer__link" href="#section-gallery-anchor"
-              ><li class="footer__item">ПРАЦЮЙ ТА ГРАЙ</li></a
-            >
-          </ul>
-        </nav>
-      </footer>
-    </div>
+              <use href="icons/all-sprites-icons.svg#icon-joystick-button"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!--Wrap lines and icons at the bottom / Обгортка ліній та іконок знизу-->
+        <div class="header-left-side__lines-and-icons-wrap">
+          <!--Wrap for lines and text / Обгортка для ліній та тексту-->
+          <div class="header-left-side__lines-wrap">
+            <div class="header-left-side__line-left"></div>
+            <p class="header-left-side__text">Про нас</p>
+            <div class="header-left-side__line-right"></div>
+          </div>
+
+          <!--Wrap for icons / Обгортка для іконок-->
+          <div class="header-left-side__icons-wrap">
+            <!--First icon / Перша іконка -->
+            <svg class="header-left-side__icon header-left-side__icon-1">
+              <use href="icons/all-sprites-icons.svg#icon-header-1"></use>
+            </svg>
+
+            <!--Second icon / Друга іконка-->
+            <svg class="header-left-side__icon header-left-side__icon-2">
+              <use href="icons/all-sprites-icons.svg#icon-header-2"></use>
+            </svg>
+
+            <!--Third icon / Третя іконка-->
+            <svg class="header-left-side__icon header-left-side__icon-3">
+              <use href="icons/all-sprites-icons.svg#icon-header-3"></use>
+            </svg>
+
+            <!--Fourth icon / Четверта іконка-->
+            <svg class="header-left-side__icon header-left-side__icon-4">
+              <use href="icons/all-sprites-icons.svg#icon-header-4"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!--Header RIGHT SIDE / ПРАВА СТОРОНА хедера-->
+      <div class="header-right-side">
+        <!--Title / Заголовок-->
+        <h2 class="header-right-side__title title-size-h2">TOP 3 PLAYERS</h2>
+
+        <!--Wrap for all players / Обгортка для всіх гравців-->
+        <div class="header-right-side-players-wrap">
+          <!--First player / Перший гравець-->
+          <div class="header-right-side-players-wrap__member">
+            <!--Photo / Фото-->
+            <img
+              class="header-right-side-players-wrap__img"
+              src="img/header-players-1.png"
+              alt="Кращий гравець клубу"
+            />
+
+            <!--Wrap for name and score / Обгортка для імені і балів-->
+            <div class="header-right-side-players-wrap__text">
+              <h2 class="header-right-side-players-wrap__title title-size-h2">Ліза Фролова</h2>
+              <p class="header-right-side-players-wrap__text-score">score 2953</p>
+            </div>
+          </div>
+
+          <!--Second player / Другий гравець-->
+          <div class="header-right-side-players-wrap__member">
+            <!--Photo / Фото-->
+            <img
+              class="header-right-side-players-wrap__img"
+              src="img/header-players-2.png"
+              alt="Кращий гравець клубу"
+            />
+
+            <!--Wrap for name and score / Обгортка для імені і балів-->
+            <div class="header-right-side-players-wrap__text">
+              <h2 class="header-right-side-players-wrap__title title-size-h2">Андрій Павлюк</h2>
+              <p class="header-right-side-players-wrap__text-score">score 2453</p>
+            </div>
+          </div>
+
+          <!--Third player / Третій гравець-->
+          <div class="header-right-side-players-wrap__member">
+            <!--Photo / Фото-->
+            <img
+              class="header-right-side-players-wrap__img"
+              src="img/header-players-3.png"
+              alt="Кращий гравець клубу"
+            />
+
+            <!--Wrap for name and score / Обгортка для імені і балів-->
+            <div class="header-right-side-players-wrap__text">
+              <h2 class="header-right-side-players-wrap__title title-size-h2">Іван Бойко</h2>
+              <p class="header-right-side-players-wrap__text-score">score 2253</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Main site content / Основний контенту сайту-->
+    <main class="main">
+      <!--Section community / Секція спільноти-->
+      <section id="section-community-anchor" class="section-community">
+        <!--Wrap for section elements / Обгортка для елементів секції -->
+        <div class="section-community__content-wrap">
+          <!--First section element / Перший елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-steam"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Найкраща ігрова платформа</h2>
+              <p class="section-community__description">
+                Пориньте в унікальний світ ігор з нашою неперевершеною ігровою платформою, що
+                пропонує неймовірні можливості та захопливі пригоди.
+              </p>
+            </div>
+          </div>
+
+          <!--Second section element / Другий елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-cup"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Щотижневі турніри</h2>
+              <p class="section-community__description">
+                Станьте частиною нашої активної ігрової сцени та беріть участь у захопливих
+                щотижневих турнірах. Відкрийте свої навички і змагайтеся з кращими гравцями.
+              </p>
+            </div>
+          </div>
+
+          <!--Third section element / Третій елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-headphones"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Онлайн спілкування</h2>
+              <p class="section-community__description">
+                Спілкуйтеся з гравцями з усього світу, діліться досвідом, обговорюйте стратегії та
+                знаходьте нових друзів у нашому онлайн-середовищі.
+              </p>
+            </div>
+          </div>
+
+          <!--Fourth section element / Четвертий елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-earth"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Спільнота в усьому світі</h2>
+              <p class="section-community__description">
+                Приєднуйтесь до нашої глобальної спільноти гравців, де кордони не існують. Тут ви
+                знайдете людей різних культур, мов та інтересів, об'єднаних любов'ю до ігор.
+              </p>
+            </div>
+          </div>
+
+          <!--Fifth section element / П'ятий елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-chat"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Онлайн чат із підтримкою</h2>
+              <p class="section-community__description">
+                Отримуйте надійну та оперативну підтримку в нашому зручному онлайн чаті. Наша
+                команда експертів завжди готова допомогти вам вирішити будь-які питання.
+              </p>
+            </div>
+          </div>
+
+          <!--Sixth section element / Шостий елемент секції-->
+          <div class="section-community__item">
+            <!--Icon / Іконка-->
+            <svg class="section-community__icon">
+              <use href="icons/all-sprites-icons.svg#icon-section-community-backet"></use>
+            </svg>
+            <!--Wrap for text / Обгортка для тексту-->
+            <div class="section-community__text-wrap">
+              <h2 class="section-community__title title-size-h2">Зручна система оплати</h2>
+              <p class="section-community__description">
+                Насолоджуйтеся простотою і зручністю нашої системи оплати, що дозволяє вам легко і
+                безпечно купувати ігри, додатковий контент та інші товари.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Section tournament / Секція змагань-->
+      <section id="section-tournament-anchor" class="section-tournament">
+        <!--lEFT SIDE section / ЛІВА СТОРОНА секції-->
+        <div class="section-tournament__left-side">
+          <img
+            class="section-tournament__img section-tournament__img-1"
+            src="img/section-tournament-1.png"
+            alt=""
+          />
+          <img
+            class="section-tournament__img section-tournament__img-2"
+            src="img/section-tournament-2.png"
+            alt=""
+          />
+        </div>
+
+        <!--RIGHT SIDE section / ПРАВА СТОРОНА секції-->
+        <div class="section-tournament__right-side">
+          <!--Wrap for content / Обгортка для контенту-->
+          <div class="section-tournament__content-wrap">
+            <h2 class="section-tournament__subtitle title-size-h2">ВЕДИ КОМАНДУ ДО ПЕРЕМОГИ</h2>
+            <h1 class="section-tournament__title">
+              Найкраще місце для <br />
+              онлайн змагань
+            </h1>
+            <p class="section-tournament__description">
+              Відчуйте справжню пристрасть до змагань на нашій платформі, де епічні битви та
+              незабутні досягнення чекають на вас. Створіть команду і приведіть її до грандіозних
+              перемог у захопливих онлайн змаганнях.
+            </p>
+            <!--Button / Кнопка-->
+            <button class="main-button">
+              <span class="main-button__text">СТВОРИТИ КОМАНДУ</span>
+              <svg class="main-button__icon main-button__icon_command">
+                <use href="icons/all-sprites-icons.svg#icon-command-button"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section id="section-cards-anchor" class="section-cards">
+        <!-- Content-wrap -->
+        <div class="section-cards__items-wrap">
+          <!-- Каждая карточа -->
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-pc.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">PC</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">20+ гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 100грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">4к монітор</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-playstation.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">Play Station</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">7 гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 150грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">Play Station 5</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-xbox.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">X-BOX</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">5 гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 150грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">Xbox One X</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-nintendo.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">Nintendo</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">5 гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 70грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">Nintendo 3DS</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-steamdeck.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">Steam Deck</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">5 гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 70грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">Steam Deck</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+
+          <div class="section-cards__item">
+            <!-- Фотка -->
+            <img class="section-cards__img" src="img/section-cards-mobile.png" alt="" />
+            <!-- Название девайса -->
+            <div class="section-cards__device-name">Mobile</div>
+            <!-- Обертка для текста и иконок -->
+            <div class="section-cards__texts-and-icons-wrap">
+              <!-- Обертка для каждой иконки с текстом -->
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
+                </svg>
+                <p class="section-cards__icon-text">Київ</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
+                </svg>
+                <p class="section-cards__icon-text">50+ гравців</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
+                </svg>
+                <p class="section-cards__icon-text">від 50грн.</p>
+              </div>
+
+              <div class="section-cards__item-wrap">
+                <svg class="section-cards__icon">
+                  <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
+                </svg>
+                <p class="section-cards__icon-text">Samsung</p>
+              </div>
+            </div>
+            <!-- Кнопка -->
+            <button class="cards-button">
+              <span class="cards-button__text">ОБРАТИ ПЛАТФОРМУ</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Галерея -->
+      <section id="section-gallery-anchor" class="section-gallery">
+        <div class="section-gallery__item section-gallery__item-1">
+          <img class="section-gallery__img" src="img/section-gallery-1.png" alt="img-1" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-2">
+          <img class="section-gallery__img" src="img/section-gallery-2.png" alt="img-2" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-3">
+          <img class="section-gallery__img" src="img/section-gallery-3.png" alt="img-3" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-4">
+          <img class="section-gallery__img" src="img/section-gallery-4.png" alt="img-4" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-5">
+          <img class="section-gallery__img" src="img/section-gallery-5.png" alt="img-5" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-6">
+          <img class="section-gallery__img" src="img/section-gallery-6.png" alt="img-6" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-7">
+          <img class="section-gallery__img" src="img/section-gallery-7.png" alt="img-7" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-8">
+          <img class="section-gallery__img" src="img/section-gallery-8.png" alt="img-8" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-9">
+          <img class="section-gallery__img" src="img/section-gallery-9.png" alt="img-9" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-10">
+          <img class="section-gallery__img" src="img/section-gallery-10.png" alt="img-10" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-11">
+          <img class="section-gallery__img" src="img/section-gallery-11.png" alt="img-11" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-12">
+          <img class="section-gallery__img" src="img/section-gallery-12.png" alt="img-12" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-13">
+          <img class="section-gallery__img" src="img/section-gallery-13.png" alt="img-13" />
+        </div>
+
+        <div class="section-gallery__item section-gallery__item-14">
+          <img class="section-gallery__img" src="img/section-gallery-14.png" alt="img-14" />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <!-- ЛЛого -->
+      <a href="#" class="footer__logo">
+        <svg class="footer__svg">
+          <use href="icons/all-sprites-icons.svg#icon-main-logo"></use>
+        </svg>
+      </a>
+
+      <!-- Меню -->
+      <nav class="footer__nav-menu">
+        <ul class="footer__item-wrap">
+          <li class="footer__item">
+            <a href="#" class="footer__link"> КОМАНДНІ ЗМАГАННЯ </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"> ОРЕНДА КОНСОЛЕЙ </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"> ОРЕНДА СЕРВЕРА </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"> ПРАЦЮЙ ТА ГРАЙ </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"> СПІЛЬНОТА</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

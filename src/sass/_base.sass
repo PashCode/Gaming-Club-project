@@ -7,6 +7,32 @@ $color-blue-dark: #101D2C
 $color-gray-dark: #AAAAAA
 $color-gray-light: #F5F5F5
 
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media (max-width: 375px)
+            @content
+    @if $breakpoint == big-phone
+        @media (max-width: 450px)
+            @content
+    @if $breakpoint == small-tablet
+        @media (max-width: 650px)
+            @content
+    @if $breakpoint == tablet
+        @media (max-width: 940px)
+            @content
+    @if $breakpoint == big-tablet
+        @media (max-width: 1050px)
+            @content
+    @if $breakpoint == small-desktop
+        @media (max-width: 1150px)
+            @content
+    @if $breakpoint == desktop
+        @media (max-width: 1220px)
+            @content
+    @if $breakpoint == big-desktop
+        @media (max-width: 1325px)
+            @content
+
 *, ::after, ::before
     margin: 0
     padding: 0
@@ -15,6 +41,20 @@ $color-gray-light: #F5F5F5
 html
     font-size: 62.5%
     scroll-behavior: smooth
+    @include respond(big-desktop)
+        font-size: 57%
+    @include respond(desktop)
+        font-size: 54%
+    @include respond(small-desktop)
+        font-size: 48%
+    @include respond(big-tablet)
+        font-size: 52%
+    @include respond(tablet)
+        font-size: 48%
+    @include respond(small-tablet)
+        font-size: 45%
+    @include respond(big-phone)
+        font-size: 50%
 
 body
     background: $color-gray-light
@@ -22,14 +62,15 @@ body
     color: $color-gray-light
 
 // GRID layout for whole site
-.container
-    display: grid
-    grid-template-rows: 100vh repeat(5, min-content)
-    grid-template-columns: min-content 1fr repeat(8, minmax(min-content, 15rem)) 1fr
-
 .main
+    position: relative
     display: grid
     grid-template-rows: repeat(4, min-content)
     grid-template-columns: 1fr repeat(8, minmax(min-content, 15rem)) 1fr
     grid-row: 2 / 6
     grid-column: 2 / -1
+    padding-left: 7rem
+    @include respond(big-tablet)
+        padding-left: 0
+    @include respond(tablet)
+        padding-left: 0

@@ -2,9 +2,15 @@
     display: grid
     grid-template-rows: 100vh
     grid-template-columns: 2.5fr 1fr
-    grid-row: 1 / 2
-    grid-column: 2 / -1
     z-index: 1
+    padding-left: 7rem
+    @include respond(big-tablet)
+        padding-left: 0
+        padding-top: 7rem
+        grid-template-rows: calc(100vh - 7rem) 1fr
+        grid-template-columns: 1fr
+        @include respond(small-tablet)
+            grid-template-rows: 70vh
 
 // Header LEFT SIDE / ЛІВА СТОРОНА хедера
 .header-left-side
@@ -13,6 +19,9 @@
     grid-template-columns: repeat(4, 1fr)
     grid-template-rows: repeat(6, 1fr)
     padding: 5rem 5% 0 5%
+    @include respond(big-phone)
+        padding: 2rem 2% 0 2%
+
     &__logo
         width: 12rem
         height: 4rem
@@ -32,32 +41,66 @@
     &__title
         letter-spacing: .2rem
         margin-bottom: 5rem
+        @include respond(tablet)
+            font-size: 3.5rem
+        @include respond(small-tablet)
+            font-size: 3rem
+        @include respond(big-phone)
+            font-size: 2.5rem
+        @include respond(big-phone)
+            margin-bottom: 3.5rem
+
+        // border-right: 0.1rem solid $color-gray-dark
+        // width: 34ch
+        // white-space: nowrap
+        // overflow: hidden
+        // -moz-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
+        // -ms-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
+        // -o-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
+        // -webkit-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
+        // animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
+        // @include respond(phone)
+        //     width: 26.5ch
+        //     font-size: 2.5rem
 
     &__lines-and-icons-wrap
         grid-row: 6 / 7
         grid-column: 1 / -1
+        @include respond(small-tablet)
+            align-self: center
     &__lines-wrap
         display: flex
         justify-content: center
         align-items: center
         margin-bottom: 2.5rem
         gap: 2rem
+        @include respond(small-tablet)
+            gap: 1rem
+        @include respond(big-phone)
+            margin-bottom: 1.5rem
     &__text
         color: $color-gray-dark
         font-weight: 600
     &__line-left, &__line-right
         border-top: 1px solid $color-gray-dark
         width: 40%
+        @include respond(big-phone)
+            width: 38%
+
     &__icons-wrap
         display: flex
         justify-content: center
         align-items: center
         padding: 0 5rem
+        @include respond(tablet)
+            column-gap: 3rem
+        @include respond(small-tablet)
+            padding: 0
     &__icon
         height: 3rem
     &__button
-        animation: button-shake 1s
-        animation-delay: 3s
+        animation: button-shake .8s
+        animation-delay: 2.5s
 
 // Header RIGHT SIDE / ПРАВА СТОРОНА хедера
 .header-right-side
@@ -65,6 +108,13 @@
     grid-template-rows: repeat(3, 1fr)
     background: $color-blue-dark
     z-index: 0
+    @include respond(big-tablet)
+        display: grid
+        grid-template-rows: repeat(3, 1fr)
+        padding: 3rem 0
+    @include respond(small-tablet)
+        display: grid
+        grid-template-rows: 1fr
     &__title
         text-transform: uppercase
         font-family: 'Montserrat-Bold'
@@ -79,16 +129,27 @@
     grid-template-rows: repeat(3, 1fr)
     justify-content: center
     align-content: center
+    row-gap: 2rem
+    @include respond(big-tablet)
+        display: flex
+        gap: 7rem
+    @include respond(tablet)
+        gap: 3rem
+    @include respond(small-tablet)
+        flex-direction: column
+        justify-self: center
     &__member
         display: grid
         grid-template-columns: repeat(2, max-content)
         align-items: center
         gap: 4rem 2rem
+        @include respond(big-tablet)
+            gap: 4rem 1rem
     &__img
         border-radius: 50%
         width: 7rem
+        height: 7rem
         z-index: 1
-        box-shadow: 0px 0px 0px 1.5px rgba(0, 0, 0, 0.4)
     &__title
         font-family: 'Montserrat-Bold'
     &__text-score
@@ -103,23 +164,15 @@
     50%
         border-color: transparent
 
-.header-left-side__title
-    border-right: 0.1rem solid $color-gray-dark
-    width: 34ch
-    white-space: nowrap
-    overflow: hidden
-    -webkit-animation: typing 2.5s steps(36), blink-caret .5s step-end infinite alternate
-    animation: typing 2.5s steps(36), blink-caret .5s step-end infinite alternate
-
 @keyframes button-shake
     10%, 90%
-        transform: translate3d(-2px, 0, 0)
+        transform: translate3d(-1px, 0, 0)
 
     20%, 80%
-        transform: translate3d(3px, 0, 0)
+        transform: translate3d(2px, 0, 0)
 
     30%, 50%, 70%
-        transform: translate3d(-6px, 0, 0)
+        transform: translate3d(-4px, 0, 0)
 
     40%, 60%
-        transform: translate3d(6px, 0, 0)
+        transform: translate3d(4px, 0, 0)
