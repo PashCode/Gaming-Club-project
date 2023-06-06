@@ -1,21 +1,14 @@
 .section-cards
     grid-column: 2 / 10
-    padding: 7rem 4rem
-    @include respond(big-phone)
-        padding: 7rem 1rem
+    padding: 7rem 3.5rem
     &__items-wrap
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr))
-        gap: 3rem 5rem
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr))
+        gap: 3rem 3.5rem
         @include respond(tablet)
-            grid-template-columns: repeat(auto-fit, minmax(35.5rem, 1fr))
-            gap: 2rem 3rem
-        @include respond(small-tablet)
-            grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr))
+            grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr))
 
     &__item
-        // display: grid
-        // grid-template-columns: 100%
         justify-content: center
         background: $color-blue-dark
         border-radius: .3rem
@@ -23,22 +16,28 @@
         width: 100%
         border-radius: .3rem
     &__device-name
-        width: 80%
+        width: 75%
         margin: 0 auto
         text-align: center
-        padding: 1.5rem 0
+        padding: .6rem 0
         background: $color-green-dark
-        transform: translateY(-2.5rem)
-        font-family: 'Montserrat-Bold'
+        transform: translateY(-1.5rem)
+        font-family: 'Montserrat-Semibold'
+        // @include respond(small-tablet)
+        //     width: 60%
     &__texts-and-icons-wrap
         display: grid
         grid-template-columns: repeat(2, max-content)
-        padding: 1.5rem 4rem 4rem 4rem
-        gap: 4.5rem 1.7rem
+        padding: 1.5rem 4rem 3rem 4rem
+        gap: 3.5rem 1.7rem
         justify-content: center
+        // @include respond(small-tablet)
+        //     gap: 3.5rem 6.5rem
     &__item-wrap
         display: flex
     &__icon
         width: 2rem
         height: 2rem
         margin-right: .8rem
+    &__icon-text
+        font-family: 'Montserrat-Light'

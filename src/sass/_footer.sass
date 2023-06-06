@@ -4,7 +4,7 @@
     padding: 5rem 7rem 3rem 7rem
     row-gap: 5rem
     @include respond(small-tablet)
-        padding: 2rem 2rem 3rem 2rem
+        padding: 2rem 2rem
         row-gap: 3rem
     &__logo
         justify-self: center
@@ -15,6 +15,11 @@
     &__svg
         width: 12rem
         height: 4rem
+        @include respond(small-tablet)
+            width: 9rem
+        @include respond(big-phone)
+            width: 8rem
+
     &__nav-menu
         justify-self: center
         align-self: center
@@ -28,8 +33,7 @@
             text-align: center
             align-items: center
         @include respond(small-tablet)
-            flex-direction: column
-            row-gap: 1rem
+            column-gap: 2rem
 
     &__link
         color: $color-gray-light
@@ -37,7 +41,7 @@
         &:hover
             color: $color-green-light
             transition: color .3s
+    @include respond(small-tablet)
+        font-size: 1.35rem
     &__item
         list-style-type: none
-        font-family: 'Montserrat-Light'
-        font-size: 2rem

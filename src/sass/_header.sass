@@ -1,73 +1,76 @@
 .header
     display: grid
     grid-template-rows: 100vh
-    grid-template-columns: 2.5fr 1fr
-    z-index: 1
+    grid-template-columns: 70% 1fr
     padding-left: 7rem
     @include respond(big-tablet)
         padding-left: 0
         padding-top: 7rem
-        grid-template-rows: calc(100vh - 7rem) 1fr
-        grid-template-columns: 1fr
+        grid-template-rows: 70vh
+        grid-template-columns: 100%
+        @include respond(tablet)
+            grid-template-rows: 60vh
         @include respond(small-tablet)
-            grid-template-rows: 70vh
+            grid-template-rows: 60vh
+            padding-top: 5rem
+        @include respond(big-phone)
+            grid-template-rows: 80vh
 
 // Header LEFT SIDE / ЛІВА СТОРОНА хедера
 .header-left-side
-    background: url(../img/header-background.png) center / cover no-repeat
     display: grid
-    grid-template-columns: repeat(4, 1fr)
-    grid-template-rows: repeat(6, 1fr)
-    padding: 5rem 5% 0 5%
-    @include respond(big-phone)
-        padding: 2rem 2% 0 2%
-
-    &__logo
-        width: 12rem
-        height: 4rem
+    grid-template-rows: repeat(3, 1fr)
+    grid-template-columns: repeat(4, 25%)
+    background: url(../img/header-background.png) center / cover no-repeat
+    &__logo-wrap
         grid-column: 2 / 4
         justify-self: center
+        height: 0
     &__svg
         width: 12rem
         height: 4rem
+        margin: 2rem auto 0 auto
+        @include respond(small-tablet)
+            width: 9rem
+            margin: 1rem auto 0 auto
+
     &__content-wrap
-        grid-row: 3 / 5
         grid-column: 1 / -1
+        grid-row: 2 / 3
+        padding: 0 3rem 0 4rem
+        @include respond(small-tablet)
+            padding: 0 3rem 0 2rem
+        @include respond(big-phone)
+            margin-bottom: 3rem
+            padding: 0 3rem 0 1rem
+
     &__subtitle
         font-family: 'Montserrat-Light'
         color: $color-green-light
         line-height: 2rem
         letter-spacing: .2rem
+        @include respond(tablet)
+            font-size: 2.5rem
+        @include respond(small-tablet)
+            font-size: 1.6rem
     &__title
         letter-spacing: .2rem
         margin-bottom: 5rem
-        @include respond(tablet)
-            font-size: 3.5rem
         @include respond(small-tablet)
-            font-size: 3rem
+            font-size: 3.7rem
+            letter-spacing: 0rem
         @include respond(big-phone)
-            font-size: 2.5rem
-        @include respond(big-phone)
-            margin-bottom: 3.5rem
-
-        // border-right: 0.1rem solid $color-gray-dark
-        // width: 34ch
-        // white-space: nowrap
-        // overflow: hidden
-        // -moz-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
-        // -ms-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
-        // -o-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
-        // -webkit-animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
-        // animation: typing 2s steps(45), blink-caret .5s step-end infinite alternate
-        // @include respond(phone)
-        //     width: 26.5ch
-        //     font-size: 2.5rem
+            font-size: 3.1rem
+            letter-spacing: 0rem
 
     &__lines-and-icons-wrap
-        grid-row: 6 / 7
         grid-column: 1 / -1
+        grid-row: 3 / 4
+        align-self: end
+        margin-bottom: 5rem
         @include respond(small-tablet)
-            align-self: center
+            margin-bottom: 2rem
+
     &__lines-wrap
         display: flex
         justify-content: center
@@ -96,51 +99,48 @@
             column-gap: 3rem
         @include respond(small-tablet)
             padding: 0
+        @include respond(big-phone)
+            column-gap: 1
     &__icon
         height: 3rem
-    &__button
-        animation: button-shake .8s
-        animation-delay: 2.5s
+        @include respond(big-phone)
+            width: 7rem
 
 // Header RIGHT SIDE / ПРАВА СТОРОНА хедера
 .header-right-side
-    display: grid
-    grid-template-rows: repeat(3, 1fr)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     background: $color-blue-dark
-    z-index: 0
     @include respond(big-tablet)
-        display: grid
-        grid-template-rows: repeat(3, 1fr)
-        padding: 3rem 0
+        padding: 5rem 0
     @include respond(small-tablet)
-        display: grid
-        grid-template-rows: 1fr
+        padding: 4rem 0
+    @include respond(big-phone)
+        padding: 2rem 0
     &__title
         text-transform: uppercase
         font-family: 'Montserrat-Bold'
         color: $color-green-light
-        justify-self: center
-        align-self: end
         padding-bottom: 4rem
 
 // Wrap for all players / Обгортка для всіх гравців
 .header-right-side-players-wrap
-    display: grid
-    grid-template-rows: repeat(3, 1fr)
-    justify-content: center
-    align-content: center
+    display: flex
+    flex-direction: column
     row-gap: 2rem
     @include respond(big-tablet)
-        display: flex
+        flex-direction: row
         gap: 7rem
     @include respond(tablet)
         gap: 3rem
     @include respond(small-tablet)
         flex-direction: column
-        justify-self: center
+    @include respond(big-phone)
+        gap: 2rem
     &__member
-        display: grid
-        grid-template-columns: repeat(2, max-content)
+        display: flex
         align-items: center
         gap: 4rem 2rem
         @include respond(big-tablet)
@@ -155,24 +155,3 @@
     &__text-score
         font-family: 'Montserrat-Light'
         color: $color-gray-dark
-
-@keyframes typing
-    0%
-        width: 0
-
-@keyframes blink-caret
-    50%
-        border-color: transparent
-
-@keyframes button-shake
-    10%, 90%
-        transform: translate3d(-1px, 0, 0)
-
-    20%, 80%
-        transform: translate3d(2px, 0, 0)
-
-    30%, 50%, 70%
-        transform: translate3d(-4px, 0, 0)
-
-    40%, 60%
-        transform: translate3d(4px, 0, 0)

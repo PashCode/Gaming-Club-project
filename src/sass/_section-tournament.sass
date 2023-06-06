@@ -15,21 +15,15 @@
         @include respond(big-tablet)
             grid-row: 2 / 3
             display: flex
-            width: 100%
-            height: 45vh
-            justify-content: space-evenly
-        @include respond(tablet)
-            height: 27vh
-        @include respond(small-tablet)
-            height: 20vh
-
+            justify-content: center
+            align-items: center
     &__img
         width: 100%
         height: 100%
         object-fit: contain
         @include respond(big-tablet)
             width: 48%
-
+            height: 95%
     &__img-1
         grid-column: 2 / 14
         grid-row: 4 / 16
@@ -49,9 +43,8 @@
             padding: 8rem 8rem
             width: 85%
         @include respond(tablet)
-            width: 95%
-        @include respond(small-tablet)
             width: 100%
+        @include respond(small-tablet)
             padding: 5rem 4rem
         @include respond(big-phone)
             padding: 5rem 2rem
@@ -61,16 +54,23 @@
     &__subtitle
         letter-spacing: .2rem
         color: $color-green-light
+        @include respond(small-tablet)
+            font-size: 1.6rem
     &__title
         margin-bottom: 3rem
         font-size: 4rem
         font-family: 'Montserrat-Bold'
         @include respond(small-tablet)
+            font-size: 4rem
+        @include respond(big-phone)
             font-size: 3.5rem
+            margin-bottom: 2rem
     &__description
         margin-bottom: 6rem
         line-height: 115%
         @include respond(big-tablet)
             line-height: 135%
         @include respond(small-tablet)
-            line-height: 115%
+            line-height: 140%
+        @include respond(big-phone)
+            margin-bottom: 4rem

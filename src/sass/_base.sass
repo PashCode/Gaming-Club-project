@@ -11,25 +11,25 @@ $color-gray-light: #F5F5F5
     @if $breakpoint == phone
         @media (max-width: 375px)
             @content
-    @if $breakpoint == big-phone
+    @if $breakpoint == big-phone // +
         @media (max-width: 450px)
             @content
-    @if $breakpoint == small-tablet
+    @if $breakpoint == small-tablet // +
         @media (max-width: 650px)
             @content
-    @if $breakpoint == tablet
+    @if $breakpoint == tablet // +
         @media (max-width: 940px)
             @content
-    @if $breakpoint == big-tablet
+    @if $breakpoint == big-tablet // +
         @media (max-width: 1050px)
             @content
-    @if $breakpoint == small-desktop
+    @if $breakpoint == small-desktop // +
         @media (max-width: 1150px)
             @content
     @if $breakpoint == desktop
-        @media (max-width: 1220px)
+        @media (max-width: 1220px) // +
             @content
-    @if $breakpoint == big-desktop
+    @if $breakpoint == big-desktop // +
         @media (max-width: 1325px)
             @content
 
@@ -54,7 +54,7 @@ html
     @include respond(small-tablet)
         font-size: 45%
     @include respond(big-phone)
-        font-size: 50%
+        font-size: 43%
 
 body
     background: $color-gray-light

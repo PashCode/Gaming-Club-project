@@ -7,6 +7,8 @@
     @include respond(big-tablet)
         width: 100%
         height: 7rem
+    @include respond(small-tablet)
+        height: 5rem
 
     &__toggle
         display: none
@@ -20,6 +22,9 @@
         @include respond(big-tablet)
             left: auto
             right: 0
+        @include respond(small-tablet)
+            width: 5.5rem
+            height: 5rem
 
     &__line
         position: fixed
@@ -30,11 +35,20 @@
         transition: .4s
         @include respond(big-tablet)
             transform: translateX(3rem) translateY(2rem)
+        @include respond(small-tablet)
+            transform: translateX(1rem) translateY(1.5rem)
+            width: 3.5rem
+            height: .2rem
 
     &__line-2
         margin-top: 1.5rem
+        @include respond(small-tablet)
+            margin-top: 1rem
     &__line-3
         margin-top: 3rem
+        @include respond(small-tablet)
+            margin-top: 2rem
+
     &__toggle:checked + &__button &__line
         background: $color-blue-dark
     &__toggle:checked + &__button &__line-1
@@ -107,7 +121,10 @@
             text-decoration: none
             color: $color-gray-light
             transition: .2s
+            @include respond(small-tablet)
+                font-size: 3rem
             @include respond(big-phone)
                 font-size: 2.5rem
+
         &:hover
             color: $color-blue-dark
