@@ -14,10 +14,10 @@
             grid-template-rows: 60vh
             padding-top: 5rem
         @include respond(big-phone)
-            grid-template-rows: 80vh
+            grid-template-rows: 82vh
 
 // Header LEFT SIDE / ЛІВА СТОРОНА хедера
-.header-left-side
+.header-main
     display: grid
     grid-template-rows: repeat(3, 1fr)
     grid-template-columns: repeat(4, 25%)
@@ -40,9 +40,11 @@
         padding: 0 3rem 0 4rem
         @include respond(small-tablet)
             padding: 0 3rem 0 2rem
+        @include respond(tablet)
+            padding: 0 3rem 0 2rem
         @include respond(big-phone)
             margin-bottom: 3rem
-            padding: 0 3rem 0 1rem
+            padding: 0 3rem 0 1.5rem
 
     &__subtitle
         font-family: 'Montserrat-Light'
@@ -56,12 +58,29 @@
     &__title
         letter-spacing: .2rem
         margin-bottom: 5rem
+        border-right: .7rem solid $color-green-light
+        white-space: nowrap
+        overflow: hidden
+        width: 0
+        opacity: 0
+        -webkit-animation: typing 1.7s steps(35, end)
+        animation: typing 1.7s steps(35, end)
+        -webkit-animation-delay: .7s
+        animation-delay: .7s
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+        @include respond(huge-desktop)
+            width: 77rem
         @include respond(small-tablet)
+            width: 59rem
             font-size: 3.7rem
             letter-spacing: 0rem
         @include respond(big-phone)
             font-size: 3.1rem
             letter-spacing: 0rem
+            width: 49rem
+        @include respond(phone)
+            width: 38rem
 
     &__lines-and-icons-wrap
         grid-column: 1 / -1
@@ -107,7 +126,7 @@
             width: 7rem
 
 // Header RIGHT SIDE / ПРАВА СТОРОНА хедера
-.header-right-side
+.header-leaderboard
     display: flex
     flex-direction: column
     align-items: center
@@ -118,15 +137,17 @@
     @include respond(small-tablet)
         padding: 4rem 0
     @include respond(big-phone)
-        padding: 2rem 0
+        padding: 2rem 1rem
     &__title
         text-transform: uppercase
         font-family: 'Montserrat-Bold'
         color: $color-green-light
         padding-bottom: 4rem
+        @include respond(big-phone)
+            padding-bottom: 2.5rem
 
 // Wrap for all players / Обгортка для всіх гравців
-.header-right-side-players-wrap
+.header-leaderboard-gamers-wrap
     display: flex
     flex-direction: column
     row-gap: 2rem
@@ -136,22 +157,72 @@
     @include respond(tablet)
         gap: 3rem
     @include respond(small-tablet)
-        flex-direction: column
+        gap: 3rem
     @include respond(big-phone)
         gap: 2rem
     &__member
         display: flex
         align-items: center
+        z-index: 1
         gap: 4rem 2rem
         @include respond(big-tablet)
             gap: 4rem 1rem
+        @include respond(small-tablet)
+            flex-direction: column
+            gap: 2rem 2rem
+
+    &__shadow-box
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+    &__shadow
+        position: absolute
+        width: 6.7rem
+        height: 6.7rem
+        box-shadow: 0px 0px 10px $color-green-dark,0px 0px 10px $color-green-light
+        animation: rotate 1.5s linear infinite
+        border-radius: 50%
+        @include respond(small-tablet)
+            width: 4.5rem
+            height: 4.5rem
+        @include respond(big-phone)
+            width: 5rem
+            height: 5rem
+
     &__img
+        position: relative
         border-radius: 50%
         width: 7rem
         height: 7rem
-        z-index: 1
+        @include respond(small-tablet)
+            width: 6rem
+            height: 6rem
+
+    &__text
+        @include respond(small-tablet)
+            text-align: center
+
     &__title
         font-family: 'Montserrat-Bold'
     &__text-score
         font-family: 'Montserrat-Light'
         color: $color-gray-dark
+
+@keyframes typing
+    0%
+        width: 0
+    50%
+        opacity: 1
+    99.9%
+        border-right: .1rem solid $color-gray-light
+    100%
+        opacity: 1
+        border: none
+
+@keyframes rotate
+    from
+        transform: rotate(0deg)
+
+    to
+        transform: rotate(360deg)

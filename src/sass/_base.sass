@@ -32,6 +32,9 @@ $color-gray-light: #F5F5F5
     @if $breakpoint == big-desktop // +
         @media (max-width: 1325px)
             @content
+    @if $breakpoint == huge-desktop // +
+        @media (max-width: 3000px)
+            @content
 
 *, ::after, ::before
     margin: 0

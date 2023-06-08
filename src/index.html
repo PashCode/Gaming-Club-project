@@ -25,16 +25,21 @@
       content="Ігровий комп'ютерний клуб у Києві. Чудове місце для занурення у світ ігор і змагань. У нас ви знайдете сучасні комп'ютери, широкий вибір ігор і дружню атмосферу. Приєднуйтесь до нас і пориньте в захоплюючий ігровий досвід."
     />
   </head>
+
+  <!------------------------------------------------------------>
   <body>
     <!-- Sidebar / Сайдбар -->
     <aside class="sidebar">
       <input type="checkbox" class="sidebar__toggle" id="nav-toggle" />
+      <!-- Кнопка -->
       <label for="nav-toggle" class="sidebar__button">
         <span class="sidebar__line sidebar__line-1"></span>
         <span class="sidebar__line sidebar__line-2"></span>
         <span class="sidebar__line sidebar__line-3"></span>
       </label>
+      <!-- Фон при нажатии -->
       <div class="sidebar__background"></div>
+      <!-- Меню -->
       <nav class="sidebar__nav-menu">
         <ul class="sidebar__item-wrap">
           <li class="sidebar__item">
@@ -55,126 +60,135 @@
         </ul>
       </nav>
     </aside>
+    <!------------------------------------------------------------>
 
     <!--Header / Хедер-->
     <header class="header">
-      <!--Header LEFT SIDE / ЛІВА СТОРОНА хедера-->
-      <div class="header-left-side">
+      <!--Header main  / Центральна частина хедера-->
+      <div class="header-main">
         <!--Main logo / Основний логотип-->
-        <a href="#" class="header-left-side__logo-wrap">
-          <svg class="header-left-side__svg">
+        <a href="#" class="header-main__logo-wrap">
+          <svg class="header-main__svg">
             <use href="icons/all-sprites-icons.svg#icon-main-logo"></use>
           </svg>
         </a>
 
         <!-- Wrap for title, subtitle, button / Обгортка для заголовка, підзаголовка, кнопки-->
-        <div class="header-left-side__content-wrap">
+        <div class="header-main__content-wrap">
           <!-- Subtitle / Підзаголовок -->
-          <h2 class="header-left-side__subtitle title-size-h2">ТВОЯ ІГРОВА СТАНЦІЯ</h2>
+          <h2 class="header-main__subtitle title-size-h2">ТВОЯ ІГРОВА СТАНЦІЯ</h2>
           <!-- Title / Заголовок -->
-          <h1 class="header-left-side__title title-size-h1">Поринь у світ сучасних ігор</h1>
+          <h1 class="header-main__title title-size-h1">Поринь у світ сучасних ігор</h1>
           <!-- Button / Кнопка -->
-          <button class="main-button header-left-side__button">
-            <span class="main-button__text header-left-side__text-btn">ОБРАТИ ПРИСТАВКУ</span>
-            <svg
-              class="main-button__icon main-button__icon_joystick header-left-side__icon_joystick"
-            >
+          <button class="main-button header-main__button">
+            <span class="main-button__text header-main__text-btn">ОБРАТИ ПРИСТАВКУ</span>
+            <svg class="main-button__icon main-button__icon_joystick header-main__icon_joystick">
               <use href="icons/all-sprites-icons.svg#icon-joystick-button"></use>
             </svg>
           </button>
         </div>
 
         <!--Wrap lines and icons at the bottom / Обгортка ліній та іконок знизу-->
-        <div class="header-left-side__lines-and-icons-wrap">
+        <div class="header-main__lines-and-icons-wrap">
           <!--Wrap for lines and text / Обгортка для ліній та тексту-->
-          <div class="header-left-side__lines-wrap">
-            <div class="header-left-side__line-left"></div>
-            <p class="header-left-side__text">Про нас</p>
-            <div class="header-left-side__line-right"></div>
+          <div class="header-main__lines-wrap">
+            <div class="header-main__line-left"></div>
+            <p class="header-main__text">Про нас</p>
+            <div class="header-main__line-right"></div>
           </div>
 
           <!--Wrap for icons / Обгортка для іконок-->
-          <div class="header-left-side__icons-wrap">
+          <div class="header-main__icons-wrap">
             <!--First icon / Перша іконка -->
-            <svg class="header-left-side__icon header-left-side__icon-1">
+            <svg class="header-main__icon header-main__icon-1">
               <use href="icons/all-sprites-icons.svg#icon-header-1"></use>
             </svg>
 
             <!--Second icon / Друга іконка-->
-            <svg class="header-left-side__icon header-left-side__icon-2">
+            <svg class="header-main__icon header-main__icon-2">
               <use href="icons/all-sprites-icons.svg#icon-header-2"></use>
             </svg>
 
             <!--Third icon / Третя іконка-->
-            <svg class="header-left-side__icon header-left-side__icon-3">
+            <svg class="header-main__icon header-main__icon-3">
               <use href="icons/all-sprites-icons.svg#icon-header-3"></use>
             </svg>
 
             <!--Fourth icon / Четверта іконка-->
-            <svg class="header-left-side__icon header-left-side__icon-4">
+            <svg class="header-main__icon header-main__icon-4">
               <use href="icons/all-sprites-icons.svg#icon-header-4"></use>
             </svg>
           </div>
         </div>
       </div>
 
-      <!--Header RIGHT SIDE / ПРАВА СТОРОНА хедера-->
-      <div class="header-right-side">
+      <!--Players leaders / Гравці лідери-->
+      <div class="header-leaderboard">
         <!--Title / Заголовок-->
-        <h2 class="header-right-side__title title-size-h2">TOP 3 PLAYERS</h2>
+        <h2 class="header-leaderboard__title title-size-h2">TOP 3 PLAYERS</h2>
 
-        <!--Wrap for all players / Обгортка для всіх гравців-->
-        <div class="header-right-side-players-wrap">
-          <!--First player / Перший гравець-->
-          <div class="header-right-side-players-wrap__member">
+        <!--Wrap for all gamers / Обгортка для всіх гравців-->
+        <div class="header-leaderboard-gamers-wrap">
+          <!--Player №1 / Гравець №2-->
+          <div class="header-leaderboard-gamers-wrap__member">
             <!--Photo / Фото-->
-            <img
-              class="header-right-side-players-wrap__img"
-              src="img/header-players-1.png"
-              alt="Кращий гравець клубу"
-            />
+            <div class="header-leaderboard-gamers-wrap__shadow-box">
+              <div class="header-leaderboard-gamers-wrap__shadow"></div>
+              <img
+                class="header-leaderboard-gamers-wrap__img"
+                src="img/header-players-1.png"
+                alt="Кращий гравець клубу"
+              />
+            </div>
 
             <!--Wrap for name and score / Обгортка для імені і балів-->
-            <div class="header-right-side-players-wrap__text">
-              <h2 class="header-right-side-players-wrap__title title-size-h2">Ліза Фролова</h2>
-              <p class="header-right-side-players-wrap__text-score">score 2953</p>
+            <div class="header-leaderboard-gamers-wrap__text">
+              <h2 class="header-leaderboard-gamers-wrap__title title-size-h2">Ліза Фролова</h2>
+              <p class="header-leaderboard-gamers-wrap__text-score">score 2953</p>
             </div>
           </div>
 
-          <!--Second player / Другий гравець-->
-          <div class="header-right-side-players-wrap__member">
+          <!--Player №2 / Гравець №2-->
+          <div class="header-leaderboard-gamers-wrap__member">
             <!--Photo / Фото-->
-            <img
-              class="header-right-side-players-wrap__img"
-              src="img/header-players-2.png"
-              alt="Кращий гравець клубу"
-            />
+            <div class="header-leaderboard-gamers-wrap__shadow-box">
+              <div class="header-leaderboard-gamers-wrap__shadow"></div>
+              <img
+                class="header-leaderboard-gamers-wrap__img"
+                src="img/header-players-2.png"
+                alt="Кращий гравець клубу"
+              />
+            </div>
 
             <!--Wrap for name and score / Обгортка для імені і балів-->
-            <div class="header-right-side-players-wrap__text">
-              <h2 class="header-right-side-players-wrap__title title-size-h2">Андрій Павлюк</h2>
-              <p class="header-right-side-players-wrap__text-score">score 2453</p>
+            <div class="header-leaderboard-gamers-wrap__text">
+              <h2 class="header-leaderboard-gamers-wrap__title title-size-h2">Андрій Павлюк</h2>
+              <p class="header-leaderboard-gamers-wrap__text-score">score 2453</p>
             </div>
           </div>
 
-          <!--Third player / Третій гравець-->
-          <div class="header-right-side-players-wrap__member">
+          <!--Player №3 / Гравець №3-->
+          <div class="header-leaderboard-gamers-wrap__member">
             <!--Photo / Фото-->
-            <img
-              class="header-right-side-players-wrap__img"
-              src="img/header-players-3.png"
-              alt="Кращий гравець клубу"
-            />
+            <div class="header-leaderboard-gamers-wrap__shadow-box">
+              <div class="header-leaderboard-gamers-wrap__shadow"></div>
+              <img
+                class="header-leaderboard-gamers-wrap__img"
+                src="img/header-players-3.png"
+                alt="Кращий гравець клубу"
+              />
+            </div>
 
             <!--Wrap for name and score / Обгортка для імені і балів-->
-            <div class="header-right-side-players-wrap__text">
-              <h2 class="header-right-side-players-wrap__title title-size-h2">Іван Бойко</h2>
-              <p class="header-right-side-players-wrap__text-score">score 2253</p>
+            <div class="header-leaderboard-gamers-wrap__text">
+              <h2 class="header-leaderboard-gamers-wrap__title title-size-h2">Іван Коваленко</h2>
+              <p class="header-leaderboard-gamers-wrap__text-score">score 2253</p>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <!------------------------------------------------------------>
 
     <!--Main site content / Основний контенту сайту-->
     <main class="main">
@@ -182,7 +196,7 @@
       <section id="section-community-anchor" class="section-community">
         <!--Wrap for section elements / Обгортка для елементів секції -->
         <div class="section-community__content-wrap">
-          <!--First section element / Перший елемент секції-->
+          <!--Element №1 / Елемент №1-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -198,7 +212,7 @@
             </div>
           </div>
 
-          <!--Second section element / Другий елемент секції-->
+          <!--Element №2 / Елемент №2-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -214,7 +228,7 @@
             </div>
           </div>
 
-          <!--Third section element / Третій елемент секції-->
+          <!--Element №3 / Елемент №3-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -230,7 +244,7 @@
             </div>
           </div>
 
-          <!--Fourth section element / Четвертий елемент секції-->
+          <!--Element №4 / Елемент №4-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -246,7 +260,7 @@
             </div>
           </div>
 
-          <!--Fifth section element / П'ятий елемент секції-->
+          <!--Element №5 / Елемент №5-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -262,7 +276,7 @@
             </div>
           </div>
 
-          <!--Sixth section element / Шостий елемент секції-->
+          <!--Element №6 / Елемент №6-->
           <div class="section-community__item">
             <!--Icon / Іконка-->
             <svg class="section-community__icon">
@@ -279,11 +293,12 @@
           </div>
         </div>
       </section>
+      <!------------------------------------------------------------>
 
       <!--Section tournament / Секція змагань-->
       <section id="section-tournament-anchor" class="section-tournament">
-        <!--lEFT SIDE section / ЛІВА СТОРОНА секції-->
-        <div class="section-tournament__left-side">
+        <!--Section with photos / Секція з фотографіями-->
+        <div class="section-tournament__photos-side">
           <img
             class="section-tournament__img section-tournament__img-1"
             src="img/section-tournament-1.png"
@@ -296,8 +311,8 @@
           />
         </div>
 
-        <!--RIGHT SIDE section / ПРАВА СТОРОНА секції-->
-        <div class="section-tournament__right-side">
+        <!--Section with text and button / Секція з текстом і кнопкою-->
+        <div class="section-tournament__text-side">
           <!--Wrap for content / Обгортка для контенту-->
           <div class="section-tournament__content-wrap">
             <h2 class="section-tournament__subtitle title-size-h2">ВЕДИ КОМАНДУ ДО ПЕРЕМОГИ</h2>
@@ -320,20 +335,21 @@
           </div>
         </div>
       </section>
+      <!------------------------------------------------------------>
 
       <!-- Cards -->
       <section id="section-cards-anchor" class="section-cards">
         <!-- Content-wrap -->
         <div class="section-cards__items-wrap">
-          <!-- Каждая карточа -->
+          <!-- Карточка №1 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-pc.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">PC</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -341,6 +357,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -348,6 +365,7 @@
                 <p class="section-cards__icon-text">20+ гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -355,6 +373,7 @@
                 <p class="section-cards__icon-text">100грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -368,14 +387,15 @@
             </button>
           </div>
 
+          <!-- Карточка №2 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-playstation.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">Play Station</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -383,6 +403,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -390,6 +411,7 @@
                 <p class="section-cards__icon-text">7 гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -397,6 +419,7 @@
                 <p class="section-cards__icon-text">150грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -410,14 +433,15 @@
             </button>
           </div>
 
+          <!-- Карточка №3 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-xbox.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">X-BOX</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -425,6 +449,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -432,6 +457,7 @@
                 <p class="section-cards__icon-text">5 гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -439,6 +465,7 @@
                 <p class="section-cards__icon-text">150грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -452,14 +479,15 @@
             </button>
           </div>
 
+          <!-- Карточка №4 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-nintendo.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">Nintendo</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -467,6 +495,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -474,6 +503,7 @@
                 <p class="section-cards__icon-text">5 гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -481,6 +511,7 @@
                 <p class="section-cards__icon-text">70грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -494,14 +525,15 @@
             </button>
           </div>
 
+          <!-- Карточка №5 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-steamdeck.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">Steam Deck</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -509,6 +541,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -516,6 +549,7 @@
                 <p class="section-cards__icon-text">5 гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -523,6 +557,7 @@
                 <p class="section-cards__icon-text">70грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -536,14 +571,15 @@
             </button>
           </div>
 
+          <!-- Карточка №6 -->
           <div class="section-cards__item">
             <!-- Фотка -->
             <img class="section-cards__img" src="img/section-cards-mobile.png" alt="" />
             <!-- Название девайса -->
             <div class="section-cards__device-name">Mobile</div>
-            <!-- Обертка для текста и иконок -->
+            <!-- Обертка для всех иконок и надписей  -->
             <div class="section-cards__texts-and-icons-wrap">
-              <!-- Обертка для каждой иконки с текстом -->
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-location"></use>
@@ -551,6 +587,7 @@
                 <p class="section-cards__icon-text">Київ</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-users"></use>
@@ -558,6 +595,7 @@
                 <p class="section-cards__icon-text">50+ гравців</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-kredit"></use>
@@ -565,6 +603,7 @@
                 <p class="section-cards__icon-text">50грн.</p>
               </div>
 
+              <!-- Обертка для каждой иконки и надписи -->
               <div class="section-cards__item-wrap">
                 <svg class="section-cards__icon">
                   <use href="icons/all-sprites-icons.svg#icon-section-cards-monitor"></use>
@@ -579,66 +618,83 @@
           </div>
         </div>
       </section>
+      <!------------------------------------------------------------>
 
-      <!-- Галерея -->
+      <!-- Секция Галерея -->
       <section id="section-gallery-anchor" class="section-gallery">
+        <!-- Фотография №1 -->
         <div class="section-gallery__item section-gallery__item-1">
-          <img class="section-gallery__img" src="img/section-gallery-1.png" alt="img-1" />
+          <img class="section-gallery__img" src="img/section-gallery-1.png" alt="" />
         </div>
 
+        <!-- Фотография №2 -->
         <div class="section-gallery__item section-gallery__item-2">
-          <img class="section-gallery__img" src="img/section-gallery-2.png" alt="img-2" />
+          <img class="section-gallery__img" src="img/section-gallery-2.png" alt="" />
         </div>
 
+        <!-- Фотография №3 -->
         <div class="section-gallery__item section-gallery__item-3">
-          <img class="section-gallery__img" src="img/section-gallery-3.png" alt="img-3" />
+          <img class="section-gallery__img" src="img/section-gallery-3.png" alt="" />
         </div>
 
+        <!-- Фотография №4 -->
         <div class="section-gallery__item section-gallery__item-4">
-          <img class="section-gallery__img" src="img/section-gallery-4.png" alt="img-4" />
+          <img class="section-gallery__img" src="img/section-gallery-4.png" alt="" />
         </div>
 
+        <!-- Фотография №5 -->
         <div class="section-gallery__item section-gallery__item-5">
-          <img class="section-gallery__img" src="img/section-gallery-5.png" alt="img-5" />
+          <img class="section-gallery__img" src="img/section-gallery-5.png" alt="" />
         </div>
 
+        <!-- Фотография №6 -->
         <div class="section-gallery__item section-gallery__item-6">
-          <img class="section-gallery__img" src="img/section-gallery-6.png" alt="img-6" />
+          <img class="section-gallery__img" src="img/section-gallery-6.png" alt="" />
         </div>
 
+        <!-- Фотография №7 -->
         <div class="section-gallery__item section-gallery__item-7">
-          <img class="section-gallery__img" src="img/section-gallery-7.png" alt="img-7" />
+          <img class="section-gallery__img" src="img/section-gallery-7.png" alt="" />
         </div>
 
+        <!-- Фотография №8 -->
         <div class="section-gallery__item section-gallery__item-8">
-          <img class="section-gallery__img" src="img/section-gallery-8.png" alt="img-8" />
+          <img class="section-gallery__img" src="img/section-gallery-8.png" alt="" />
         </div>
 
+        <!-- Фотография №9 -->
         <div class="section-gallery__item section-gallery__item-9">
-          <img class="section-gallery__img" src="img/section-gallery-9.png" alt="img-9" />
+          <img class="section-gallery__img" src="img/section-gallery-9.png" alt="" />
         </div>
 
+        <!-- Фотография №10 -->
         <div class="section-gallery__item section-gallery__item-10">
-          <img class="section-gallery__img" src="img/section-gallery-10.png" alt="img-10" />
+          <img class="section-gallery__img" src="img/section-gallery-10.png" alt="" />
         </div>
 
+        <!-- Фотография №11 -->
         <div class="section-gallery__item section-gallery__item-11">
-          <img class="section-gallery__img" src="img/section-gallery-11.png" alt="img-11" />
+          <img class="section-gallery__img" src="img/section-gallery-11.png" alt="" />
         </div>
 
+        <!-- Фотография №12 -->
         <div class="section-gallery__item section-gallery__item-12">
-          <img class="section-gallery__img" src="img/section-gallery-12.png" alt="img-12" />
+          <img class="section-gallery__img" src="img/section-gallery-12.png" alt="" />
         </div>
 
+        <!-- Фотография №13 -->
         <div class="section-gallery__item section-gallery__item-13">
-          <img class="section-gallery__img" src="img/section-gallery-13.png" alt="img-13" />
+          <img class="section-gallery__img" src="img/section-gallery-13.png" alt="" />
         </div>
 
+        <!-- Фотография №14 -->
         <div class="section-gallery__item section-gallery__item-14">
-          <img class="section-gallery__img" src="img/section-gallery-14.png" alt="img-14" />
+          <img class="section-gallery__img" src="img/section-gallery-14.png" alt="" />
         </div>
       </section>
     </main>
+    <!------------------------------------------------------------>
+
     <footer class="footer">
       <!-- ЛЛого -->
       <a href="#" class="footer__logo">

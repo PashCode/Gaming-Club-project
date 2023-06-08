@@ -17,11 +17,11 @@
         padding: 2rem 2rem 1.7rem
     @include respond(small-desktop)
         padding: 2rem 1.5rem 1.7rem
-        width: 24rem
-        height: 4.3rem
     @include respond(big-phone)
         width: 20rem
         height: 4rem
+    @include respond(phone)
+        padding: 2rem 1rem 1.7rem
 
     &__text
         -webkit-transition: all .2s ease-out
@@ -31,7 +31,7 @@
         transition: all .2s ease-out
         @include respond(phone)
             font-size: 1.8rem
-        @include respond(small-desktop)
+        @include respond(big-tablet)
             @include mobile-button-font
 
     &:hover &__text
@@ -61,12 +61,14 @@
         -o-transition: all .2s ease-out
         transition: all .2s ease-out
         z-index: 1
-        @include respond(big-tablet)
-            transform: translateX(10.5rem)
-        @include respond(big-desktop)
+        @include respond(huge-desktop)
             transform: translateX(10.3rem)
         @include respond(small-desktop)
-            transform: translateX(10.8rem)
+            transform: translateX(10.85rem)
+        @include respond(big-tablet)
+            transform: translateX(10.3rem)
+        @include respond(big-phone)
+            transform: translateX(7.5rem)
 
     &::before // Line over the button / Смужка над кнопкою
         position: absolute
@@ -111,7 +113,7 @@
 .cards-button
     width: 100%
     @extend .main-button
-    @include respond(small-desktop)
+    @include respond(big-tablet)
         @include mobile-button-font
     &:hover &__text
         transform: translateX(0rem)

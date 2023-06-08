@@ -12,27 +12,30 @@
         justify-content: center
         background: $color-blue-dark
         border-radius: .3rem
+        overflow: hidden
+    &__item:hover &__img
+        transform: scale(1.1)
+
     &__img
         width: 100%
         border-radius: .3rem
+        transition: .5s
     &__device-name
         width: 75%
         margin: 0 auto
         text-align: center
         padding: .6rem 0
         background: $color-green-dark
-        transform: translateY(-1.5rem)
+        transform: translateY(-1.7rem)
         font-family: 'Montserrat-Semibold'
-        // @include respond(small-tablet)
-        //     width: 60%
+
     &__texts-and-icons-wrap
         display: grid
         grid-template-columns: repeat(2, max-content)
         padding: 1.5rem 4rem 3rem 4rem
         gap: 3.5rem 1.7rem
         justify-content: center
-        // @include respond(small-tablet)
-        //     gap: 3.5rem 6.5rem
+
     &__item-wrap
         display: flex
     &__icon
