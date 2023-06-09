@@ -3,58 +3,57 @@
     grid-template-rows: 100vh
     grid-template-columns: 70% 1fr
     padding-left: 7rem
-    @include respond(big-tablet)
+    @include respond(big-tablet) // 1050px -- 941px
         padding-left: 0
         padding-top: 7rem
-        grid-template-rows: 70vh
+        grid-template-rows: calc(100vh - 7rem)
         grid-template-columns: 100%
-        @include respond(tablet)
-            grid-template-rows: 60vh
-        @include respond(small-tablet)
-            grid-template-rows: 60vh
+        @include respond(tablet) // 940px -- 651px
+            grid-template-rows: 80vh
+        @include respond(small-tablet) // 650px -- 451px
             padding-top: 5rem
         @include respond(big-phone)
-            grid-template-rows: 82vh
+            grid-template-rows: 82vh // 450px -- 376px
 
-// Header LEFT SIDE / ЛІВА СТОРОНА хедера
+// Header main / Центральна частина хедера
 .header-main
     display: grid
     grid-template-rows: repeat(3, 1fr)
     grid-template-columns: repeat(4, 25%)
-    background: url(../img/header-background.png) center / cover no-repeat
+    background: url(../img/header-background.jpg) center / cover no-repeat
+
     &__logo-wrap
         grid-column: 2 / 4
+        grid-row: 1 / 2
         justify-self: center
         height: 0
     &__svg
         width: 12rem
         height: 4rem
-        margin: 2rem auto 0 auto
-        @include respond(small-tablet)
+        margin-top: 2rem
+        @include respond(small-tablet) // 650px -- 451px
             width: 9rem
-            margin: 1rem auto 0 auto
+            margin-top: 1.5rem
 
     &__content-wrap
         grid-column: 1 / -1
         grid-row: 2 / 3
-        padding: 0 3rem 0 4rem
-        @include respond(small-tablet)
+        padding: 0 3rem
+        @include respond(tablet) // 940px -- 651px
             padding: 0 3rem 0 2rem
-        @include respond(tablet)
-            padding: 0 3rem 0 2rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             margin-bottom: 3rem
             padding: 0 3rem 0 1.5rem
 
     &__subtitle
         font-family: 'Montserrat-Light'
         color: $color-green-light
-        line-height: 2rem
         letter-spacing: .2rem
-        @include respond(tablet)
+        @include respond(tablet) // 940px -- 651px
             font-size: 2.5rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451p
             font-size: 1.6rem
+
     &__title
         letter-spacing: .2rem
         margin-bottom: 5rem
@@ -69,17 +68,17 @@
         animation-delay: .7s
         -webkit-animation-fill-mode: forwards
         animation-fill-mode: forwards
-        @include respond(huge-desktop)
+        @include respond(huge-desktop) // 3000px -- 1326px
             width: 77rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 1050px -- 941px
             width: 59rem
             font-size: 3.7rem
             letter-spacing: 0rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             font-size: 3.1rem
             letter-spacing: 0rem
             width: 49rem
-        @include respond(phone)
+        @include respond(phone) // 375px -- 320px
             width: 38rem
 
     &__lines-and-icons-wrap
@@ -87,7 +86,7 @@
         grid-row: 3 / 4
         align-self: end
         margin-bottom: 5rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             margin-bottom: 2rem
 
     &__lines-wrap
@@ -96,54 +95,46 @@
         align-items: center
         margin-bottom: 2.5rem
         gap: 2rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             gap: 1rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             margin-bottom: 1.5rem
     &__text
         color: $color-gray-dark
-        font-weight: 600
+        font-family: 'Montserrat-Semibold'
     &__line-left, &__line-right
         border-top: 1px solid $color-gray-dark
         width: 40%
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             width: 38%
 
     &__icons-wrap
         display: flex
-        justify-content: center
-        align-items: center
-        padding: 0 5rem
-        @include respond(tablet)
-            column-gap: 3rem
-        @include respond(small-tablet)
-            padding: 0
-        @include respond(big-phone)
-            column-gap: 1
+        justify-content: space-around
+        padding: 0 3rem
+        gap: 3rem
     &__icon
         height: 3rem
-        @include respond(big-phone)
-            width: 7rem
 
-// Header RIGHT SIDE / ПРАВА СТОРОНА хедера
+// Players leaders / Гравці лідери
 .header-leaderboard
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
     background: $color-blue-dark
-    @include respond(big-tablet)
+    @include respond(big-tablet) // 1050px -- 941px
         padding: 5rem 0
-    @include respond(small-tablet)
+    @include respond(small-tablet) // 650px -- 451px
         padding: 4rem 0
-    @include respond(big-phone)
+    @include respond(big-phone)  // 450px -- 376px
         padding: 2rem 1rem
     &__title
         text-transform: uppercase
         font-family: 'Montserrat-Bold'
         color: $color-green-light
         padding-bottom: 4rem
-        @include respond(big-phone)
+        @include respond(big-phone)  // 450px -- 376px
             padding-bottom: 2.5rem
 
 // Wrap for all players / Обгортка для всіх гравців
@@ -151,64 +142,59 @@
     display: flex
     flex-direction: column
     row-gap: 2rem
-    @include respond(big-tablet)
+    @include respond(big-tablet) // 1050px -- 941px
         flex-direction: row
         gap: 7rem
-    @include respond(tablet)
+    @include respond(tablet) // 940px -- 651px
         gap: 3rem
-    @include respond(small-tablet)
-        gap: 3rem
-    @include respond(big-phone)
+    @include respond(big-phone) // 450px -- 376px
         gap: 2rem
     &__member
         display: flex
         align-items: center
         z-index: 1
-        gap: 4rem 2rem
-        @include respond(big-tablet)
-            gap: 4rem 1rem
-        @include respond(small-tablet)
+        column-gap: 2rem
+        @include respond(small-tablet) // 650px -- 451px
             flex-direction: column
-            gap: 2rem 2rem
+            row-gap: 1rem
 
-    &__shadow-box
+    &__shadow-box // Wrap for shadow and photo / Обгортка для тіні і фото
         position: relative
         display: flex
         justify-content: center
         align-items: center
-    &__shadow
+    &__shadow // Shadow behind the photo / Тінь за фото
         position: absolute
         width: 6.7rem
         height: 6.7rem
         box-shadow: 0px 0px 10px $color-green-dark,0px 0px 10px $color-green-light
-        animation: rotate 1.5s linear infinite
+        animation: shadow-rotate 1.5s linear infinite
         border-radius: 50%
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             width: 4.5rem
             height: 4.5rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             width: 5rem
             height: 5rem
-
     &__img
         position: relative
         border-radius: 50%
         width: 7rem
         height: 7rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             width: 6rem
             height: 6rem
 
-    &__text
+    &__text // Wrap for the title and text-score / Обгортка для заголовку і балів
         @include respond(small-tablet)
             text-align: center
-
     &__title
         font-family: 'Montserrat-Bold'
     &__text-score
         font-family: 'Montserrat-Light'
         color: $color-gray-dark
 
+// Animation of typing main title / Анімація друку головного заголовку
 @keyframes typing
     0%
         width: 0
@@ -220,9 +206,9 @@
         opacity: 1
         border: none
 
-@keyframes rotate
-    from
+// Animation of rotate shadow behind the photo / Анімація обертання тіні за фото
+@keyframes shadow-rotate
+    0%
         transform: rotate(0deg)
-
-    to
+    100%
         transform: rotate(360deg)

@@ -7,40 +7,43 @@ $color-blue-dark: #101D2C
 $color-gray-dark: #AAAAAA
 $color-gray-light: #F5F5F5
 
+// Media queries / Медіа запроси
 @mixin respond($breakpoint)
     @if $breakpoint == phone
-        @media (max-width: 375px)
+        @media (max-width: 375px) // 375px -- 320px
             @content
-    @if $breakpoint == big-phone // +
-        @media (max-width: 450px)
+    @if $breakpoint == big-phone
+        @media (max-width: 450px) // 450px -- 376px
             @content
-    @if $breakpoint == small-tablet // +
-        @media (max-width: 650px)
+    @if $breakpoint == small-tablet
+        @media (max-width: 650px) // 650px -- 451px
             @content
-    @if $breakpoint == tablet // +
-        @media (max-width: 940px)
+    @if $breakpoint == tablet
+        @media (max-width: 940px) // 940px -- 651px
             @content
-    @if $breakpoint == big-tablet // +
-        @media (max-width: 1050px)
+    @if $breakpoint == big-tablet
+        @media (max-width: 1050px) // 1050px -- 941px
             @content
-    @if $breakpoint == small-desktop // +
-        @media (max-width: 1150px)
+    @if $breakpoint == small-desktop
+        @media (max-width: 1150px) // 1150px -- 1051px
             @content
     @if $breakpoint == desktop
-        @media (max-width: 1220px) // +
+        @media (max-width: 1220px) // 1220px -- 1151px
             @content
-    @if $breakpoint == big-desktop // +
-        @media (max-width: 1325px)
+    @if $breakpoint == big-desktop
+        @media (max-width: 1325px) // 1325px -- 1221px
             @content
-    @if $breakpoint == huge-desktop // +
-        @media (max-width: 3000px)
+    @if $breakpoint == huge-desktop
+        @media (max-width: 3000px) // 3000px -- 1326px
             @content
 
+// Reset and normalize indents / Скидання та нормалізація відступів
 *, ::after, ::before
     margin: 0
     padding: 0
     box-sizing: border-box
 
+// 62.5% = 10px font size / 62.5% = розміру шрифту в 10px
 html
     font-size: 62.5%
     scroll-behavior: smooth
@@ -74,6 +77,4 @@ body
     grid-column: 2 / -1
     padding-left: 7rem
     @include respond(big-tablet)
-        padding-left: 0
-    @include respond(tablet)
         padding-left: 0

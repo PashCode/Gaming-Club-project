@@ -3,16 +3,15 @@
     grid-template-columns: repeat(2, 1fr)
     grid-column: 1 / -1
     background: $color-blue-dark
-    z-index: 0
-    @include respond(big-tablet)
+    @include respond(big-tablet) // 1050px -- 941px
         grid-template-columns: 1fr
 
-    &__photos-side
+    &__photos-side // Section with photos / Секція з фотографіями
         display: grid
         grid-template-rows: repeat(24, 1fr)
         grid-template-columns: repeat(16, 1fr)
         background: url(../img/section-tournament-background.png) center / cover no-repeat
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             grid-row: 2 / 3
             display: flex
             justify-content: center
@@ -26,7 +25,7 @@
             transform: scale(1.05)
             box-shadow: 0 0 80px 0px #434773
             z-index: 1
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             width: 48%
             height: 95%
     &__img-1
@@ -36,46 +35,46 @@
         grid-column: 5 / 17
         grid-row: 10 / 22
         transform: translateX(3.5rem)
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             transform: translateX(0rem)
 
-    &__text-side
+    &__text-side // Section with text and button / Секція з текстом і кнопкою
         display: grid
         padding: 12rem 8rem
         grid-template-rows: 1fr min-content 1fr
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             grid-row: 1 / 2
             padding: 8rem 8rem
             width: 85%
-        @include respond(tablet)
+        @include respond(tablet) // 940px -- 651px
             width: 100%
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             padding: 5rem 4rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             padding: 3.5rem 2rem
 
-    &__content-wrap
+    &__content-wrap // Wrap for text and button / Обгортка для тексту і кнопки
         grid-row: 2 / 3
     &__subtitle
         letter-spacing: .2rem
         color: $color-green-light
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             font-size: 1.6rem
     &__title
         margin-bottom: 3rem
         font-size: 4rem
         font-family: 'Montserrat-Bold'
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             font-size: 4rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             font-size: 3.5rem
             margin-bottom: 2rem
     &__description
         margin-bottom: 6rem
         line-height: 115%
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             line-height: 135%
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             line-height: 140%
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             margin-bottom: 4rem

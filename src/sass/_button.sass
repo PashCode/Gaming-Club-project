@@ -1,5 +1,5 @@
 .main-button
-    @include button-font
+    @include desktop-button-font
     width: 27rem
     height: 5rem
     position: relative
@@ -13,61 +13,47 @@
     border-radius: .2rem
     cursor: pointer
     overflow: hidden
-    @include respond(tablet)
+    @include respond(tablet) // 940px -- 651px
         padding: 2rem 2rem 1.7rem
-    @include respond(small-desktop)
+    @include respond(small-desktop) // 1150px -- 1051px
         padding: 2rem 1.5rem 1.7rem
-    @include respond(big-phone)
+    @include respond(big-phone) // 450px -- 376px
         width: 20rem
         height: 4rem
-    @include respond(phone)
+    @include respond(phone) // 375px -- 320px
         padding: 2rem 1rem 1.7rem
 
     &__text
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
-        @include respond(phone)
+        transition: .3s ease-out
+        z-index: 1
+        @include respond(phone) // 375px -- 320px
             font-size: 1.8rem
-        @include respond(big-tablet)
+        @include respond(tablet) // 1050px -- 941px
             @include mobile-button-font
-
     &:hover &__text
         transform: translateX(-2rem)
-        z-index: 1
 
     &__icon
         position: absolute
         transform: translateX(20rem)
-        -webkit-transition: all .2s
-        -moz-transition: all .2s
-        -ms-transition: all .2s
-        -o-transition: all .2s
-        transition: all .2s
-        &_joystick
-            height: 80%
+        transition: .3s ease-in
+        z-index: 1
+        &_joystick // Joystick icon  / Іконка джойстика
             width: 12%
-        &_command
+            height: 80%
+        &_command // Command icon / Іконка команди
             width: 10%
             height: 80%
-
     &:hover &__icon
         transform: translateX(10rem)
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
-        z-index: 1
-        @include respond(huge-desktop)
+        transition: .3s ease-out
+        @include respond(huge-desktop) // 3000px -- 1326px
             transform: translateX(10.3rem)
-        @include respond(small-desktop)
+        @include respond(small-desktop) // 1150px -- 1051px
             transform: translateX(10.85rem)
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             transform: translateX(10.3rem)
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             transform: translateX(7.5rem)
 
     &::before // Line over the button / Смужка над кнопкою
@@ -78,17 +64,11 @@
         top: 0
         right: 0
         background: $color-gray-light
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
+        transition: .3s ease-out
     &:hover::before
         width: 100%
         height: 5%
-        left: auto
         background: $color-gray-light
-        z-index: 1
     &:active::before
         background: $color-green-light
         transition: none
@@ -100,60 +80,34 @@
         height: 100%
         right: 0
         background: $color-green-dark
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
+        transition: .3s ease-out
     &:hover::after
         width: 100%
-        left: auto
-        right: 0
 
-.cards-button
-    width: 100%
-    @extend .main-button
-    @include respond(big-tablet)
-        @include mobile-button-font
-    &:hover &__text
-        transform: translateX(0rem)
-        z-index: 1
-    &::before // Line over the button / Смужка над кнопкою
-        position: absolute
-        content: ""
+    &__cards // Section-cards button / Кнопка з секціі з карточками
         width: 100%
-        height: 5%
-        top: 100%
-        background: $color-gray-light
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
-        z-index: 1
-    &:hover::before
-        width: 100%
-        height: 5%
-        top: 0
-        background: $color-gray-light
-    &:active::before
-        background: $color-green-light
-        transition: none
+        border-radius: 0
+        &:hover &_text
+            transform: translateX(0rem)
 
-    &:after // Transition to darker color / Затемнення кольору
-        position: absolute
-        content: ""
-        width: 100%
-        height: 0%
-        bottom: 0
-        background: $color-green-dark
-        -webkit-transition: all .2s ease-out
-        -moz-transition: all .2s ease-out
-        -ms-transition: all .2s ease-out
-        -o-transition: all .2s ease-out
-        transition: all .2s ease-out
-    &:hover::after
-        width: 100%
-        height: 100%
-        top: auto
-        bottom: 0
+        &::before // Line over the button / Смужка над кнопкою
+            width: 100%
+            top: 100%
+            z-index: 1
+            transition: .2s ease-out
+        &:hover::before
+            top: 0
+            background: $color-gray-light
+            z-index: 1
+        &:active::before
+            background: $color-green-light
+            transition: none
+
+        &:after // Transition to darker color / Затемнення кольору
+            width: 100%
+            height: 0
+            bottom: 0
+            transition: .2s ease-out
+        &:hover::after
+            width: 100%
+            height: 100%

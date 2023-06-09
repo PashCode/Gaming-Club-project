@@ -1,15 +1,15 @@
 .section-cards
     grid-column: 2 / 10
     padding: 7rem 3.5rem
+
     &__items-wrap
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr))
         gap: 3rem 3.5rem
-        @include respond(tablet)
+        @include respond(tablet) // 940px -- 651px
             grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr))
 
     &__item
-        justify-content: center
         background: $color-blue-dark
         border-radius: .3rem
         overflow: hidden
@@ -20,6 +20,7 @@
         width: 100%
         border-radius: .3rem
         transition: .5s
+
     &__device-name
         width: 75%
         margin: 0 auto

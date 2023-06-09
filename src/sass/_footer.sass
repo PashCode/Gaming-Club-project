@@ -3,21 +3,19 @@
     background: $color-blue-dark
     padding: 5rem 7rem 3rem 7rem
     row-gap: 5rem
-    @include respond(small-tablet)
+    @include respond(small-tablet) // 540px -- 451px
         padding: 2rem 2rem
         row-gap: 3rem
+
     &__logo
         justify-self: center
         align-self: center
-        @include respond(tablet)
-            padding: 0
-
     &__svg
         width: 12rem
         height: 4rem
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 540px -- 451px
             width: 9rem
-        @include respond(big-phone)
+        @include respond(big-phone) // 450px -- 376px
             width: 8rem
 
     &__nav-menu
@@ -26,22 +24,19 @@
     &__item-wrap
         display: flex
         column-gap: 3.5rem
-        @include respond(big-tablet)
+        @include respond(big-tablet) // 1050px -- 941px
             text-align: center
             align-items: center
-        @include respond(tablet)
+        @include respond(tablet) // 940px -- 651px
             text-align: center
             align-items: center
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 540px -- 451px
             column-gap: 2rem
-
+    &__item
+        list-style-type: none
     &__link
         color: $color-gray-light
         text-decoration: none
         &:hover
             color: $color-green-light
-            transition: color .3s
-    @include respond(small-tablet)
-        font-size: 1.35rem
-    &__item
-        list-style-type: none
+            transition: .3s
