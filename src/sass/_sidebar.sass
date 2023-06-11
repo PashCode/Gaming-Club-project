@@ -90,14 +90,16 @@
         position: fixed
         height: 100vh
         width: 40%
-        transform: translateX(-100%)
         transition: .4s ease-in
+        transform: translateX(-100%)
         z-index: 2
+        opacity: 0
         @include respond(big-tablet) // 1050px -- 941px
             height: 50vh
             width: 100%
             transform: translateY(-100%)
     &__toggle:checked ~ &__nav-menu
+        opacity: 1
         transform: translateX(0)
         @include respond(big-tablet) // 1050px -- 941px
             transform: translateY(0)
