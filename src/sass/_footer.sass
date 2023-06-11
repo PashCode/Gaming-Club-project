@@ -37,6 +37,8 @@
     &__link
         color: $color-gray-light
         text-decoration: none
+        @include respond(big-phone)
+            font-size: 1rem
         &:hover
             color: $color-green-light
             transition: .3s
