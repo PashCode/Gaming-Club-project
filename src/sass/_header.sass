@@ -103,7 +103,7 @@
         color: $color-gray-dark
         font-family: 'Montserrat-Semibold'
     &__line-left, &__line-right
-        border-top: 1px solid $color-gray-dark
+        border-top: .1rem solid $color-gray-dark
         width: 40%
         @include respond(big-phone) // 450px -- 376px
             width: 38%
@@ -167,7 +167,7 @@
         position: absolute
         width: 6.7rem
         height: 6.7rem
-        box-shadow: 0px 0px 10px $color-green-dark,0px 0px 10px $color-green-light
+        box-shadow: 0 0 1rem $color-green-dark,0 0 1rem $color-green-light
         animation: shadow-rotate 1.5s linear infinite
         border-radius: 50%
         @include respond(small-tablet) // 650px -- 451px
@@ -186,7 +186,7 @@
             height: 6rem
 
     &__text // Wrap for the title and text-score / Обгортка для заголовку і балів
-        @include respond(small-tablet)
+        @include respond(small-tablet) // 650px -- 451px
             text-align: center
     &__title
         font-family: 'Montserrat-Bold'
