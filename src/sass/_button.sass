@@ -18,8 +18,8 @@
     @include respond(small-desktop) // 1150px -- 1051px
         padding: 2rem 1.5rem 1.7rem
     @include respond(big-phone) // 450px -- 376px
-        width: 20rem
-        height: 4rem
+        width: 23rem
+        height: 4.2rem
     @include respond(phone) // 375px -- 320px
         padding: 2rem 1rem 1.7rem
 
@@ -54,7 +54,7 @@
         @include respond(big-tablet) // 1050px -- 941px
             transform: translateX(10.3rem)
         @include respond(big-phone) // 450px -- 376px
-            transform: translateX(7.5rem)
+            transform: translateX(8.7rem)
 
     &::before // Line over the button / Смужка над кнопкою
         position: absolute
@@ -87,6 +87,8 @@
     &__cards // Section-cards button / Кнопка з секціі з карточками
         width: 100%
         border-radius: 0
+        @include respond(big-phone) // 450px -- 376px
+            height: 5.5rem
         &:hover &_text
             transform: translateX(0rem)
 
