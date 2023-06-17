@@ -13,23 +13,24 @@
     border-radius: .2rem
     cursor: pointer
     overflow: hidden
-    @include respond(tablet) // 940px -- 651px
-        padding: 2rem 2rem 1.7rem
     @include respond(small-desktop) // 1150px -- 1051px
         padding: 2rem 1.5rem 1.7rem
+    @include respond(tablet) // 940px -- 651px
+        padding: 2rem 2rem 1.7rem
     @include respond(big-phone) // 450px -- 376px
         width: 24rem
         height: 4.2rem
     @include respond(phone) // 375px -- 320px
-        padding: 2rem 1rem 1.7rem
+        width: 22rem
+        height: 4rem
 
     &__text
         transition: .3s ease-out
         z-index: 1
-        @include respond(phone) // 375px -- 320px
-            font-size: 1.8rem
         @include respond(tablet) // 1050px -- 941px
             @include mobile-button-font
+        @include respond(phone) // 375px -- 320px
+            font-size: 1.8rem
     &:hover &__text
         transform: translateX(-2rem)
 
